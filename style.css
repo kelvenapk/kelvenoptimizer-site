@@ -70,7 +70,7 @@ body {
 }
 
 .btn-em-breve {
-  background: var(--primary);
+  background: #ff9800;
   color: #000;
   padding: 1rem 2rem;
   border: none;
@@ -82,7 +82,7 @@ body {
 }
 
 .btn-em-breve:hover {
-  background: #00cc00;
+  background: #e68900;
   transform: translateY(-2px);
 }
 
