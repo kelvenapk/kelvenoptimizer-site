@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KelvenOptimizer - Em Breve</title>
+    <title>KelvenOptimizer - Maximize seu PC 🌌</title>
+    <meta name="description" content="Ferramenta definitiva para otimizar Windows com estética futurista roxa e buraco negro!">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌌</text></svg>">
+    
     <style>
         :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --success: #4CAF50;
-            --warning: #FF9800;
-            --danger: #F44336;
-            --bg-main: #ffffff;
-            --bg-secondary: #f5f7fa;
-            --bg-card: #ffffff;
-            --text-primary: #2c3e50;
-            --text-secondary: #6c757d;
-            --border: #e0e6ed;
-            --shadow: rgba(0, 0, 0, 0.1);
+            --primary: #9333ea;
+            --secondary: #7c3aed;
+            --accent: #ec4899;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-main: #0a0a0a;
+            --bg-secondary: #1a0b2e;
+            --bg-card: rgba(26, 11, 46, 0.4);
+            --text-primary: #e0e7ff;
+            --text-secondary: #a78bfa;
+            --border: rgba(147, 51, 234, 0.3);
+            --shadow: rgba(147, 51, 234, 0.2);
+            --blur: blur(20px);
         }
 
-        [data-theme="dark"] {
-            --bg-main: #0f1419;
-            --bg-secondary: #1a1f29;
-            --bg-card: #252d3a;
-            --text-primary: #e8eaed;
-            --text-secondary: #9ba3af;
-            --border: #2d3748;
-            --shadow: rgba(0, 0, 0, 0.3);
+        [data-theme="light"] {
+            --bg-main: #f8fafc;
+            --bg-secondary: #e2e8f0;
+            --bg-card: rgba(255, 255, 255, 0.7);
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border: rgba(147, 51, 234, 0.2);
+            --shadow: rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -37,22 +42,69 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             background: var(--bg-main);
             color: var(--text-primary);
-            transition: background 0.3s ease, color 0.3s ease;
+            transition: all 0.3s ease;
             line-height: 1.6;
         }
 
+        /* 🌌 BURACO NEGRO ROXO */
+        .blackhole {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, 
+                rgba(0,0,0,0.9) 0%, 
+                rgba(147, 51, 234, 0.8) 30%, 
+                rgba(124, 58, 237, 0.6) 60%, 
+                transparent 100%);
+            border-radius: 50%;
+            animation: spin 20s linear infinite;
+            z-index: -1;
+            opacity: 0.2;
+            filter: blur(3px);
+        }
+
+        .blackhole::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, 
+                transparent, 
+                rgba(147, 51, 234, 0.3), 
+                transparent, 
+                rgba(124, 58, 237, 0.3), 
+                transparent);
+            animation: ring 10s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes ring {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        /* NAVEGAÇÃO BLURRY */
         .navbar {
             background: var(--bg-card);
+            backdrop-filter: var(--blur);
             border-bottom: 1px solid var(--border);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px var(--shadow);
+            box-shadow: 0 4px 20px var(--shadow);
         }
 
         .navbar-content {
@@ -68,103 +120,68 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-decoration: none;
         }
 
-        .logo-icon {
+        .logo::before {
+            content: '🌌';
             font-size: 2rem;
-            animation: rotate 3s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-link:hover {
-            color: var(--primary);
-        }
-
-        .theme-toggle {
-            background: var(--bg-secondary);
-            border: 2px solid var(--border);
-            border-radius: 50px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .theme-toggle:hover {
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            padding: 6rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(180deg); }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, 
+                rgba(147, 51, 234, 0.1) 0%, 
+                rgba(124, 58, 237, 0.05) 50%, 
+                rgba(236, 72, 153, 0.05) 100%);
+            backdrop-filter: var(--blur);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 800px;
-            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: white;
+            font-size: 4rem;
+            font-weight: 900;
             margin-bottom: 1.5rem;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, var(--primary), var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(147, 51, 234, 0.5);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
         }
 
         .hero p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 2.5rem;
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
             font-weight: 300;
         }
 
@@ -175,86 +192,54 @@
             flex-wrap: wrap;
         }
 
+        /* BOTÕES FUTURISTAS */
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 2.5rem;
             border: none;
-            border-radius: 12px;
+            border-radius: 16px;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
-            background: white;
-            color: var(--primary);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.6);
         }
 
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
-        }
-
-        /* BOTÃO EM BREVE - LARANJA NEON */
         .btn-em-breve {
-            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
-            color: #fff;
-            padding: 0.9rem 1.5rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+            color: white;
+            box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
+            animation: pulse-orange 2s infinite;
         }
 
-        .btn-em-breve:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.6);
+        @keyframes pulse-orange {
+            0% { box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4); }
+            50% { box-shadow: 0 8px 35px rgba(255, 152, 0, 0.8); }
+            100% { box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4); }
         }
 
+        /* CARDS COM BLUR ROXO */
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 4rem 2rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 3rem 0 2rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--text-primary);
-        }
-
-        .section-subtitle {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .grid {
@@ -266,34 +251,20 @@
 
         .card {
             background: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: var(--blur);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            box-shadow: 0 8px 32px var(--shadow);
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px var(--shadow);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.3);
             border-color: var(--primary);
-        }
-
-        .card:hover::before {
-            opacity: 1;
         }
 
         .card-header {
@@ -301,205 +272,54 @@
             align-items: flex-start;
             gap: 1rem;
             margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
         }
 
         .card-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            flex-shrink: 0;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .card-content {
-            flex: 1;
-        }
-
-        .card-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .card-badge {
-            display: inline-block;
-            padding: 0.35rem 0.9rem;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: white;
-        }
-
-        .badge-basic { background: var(--success); }
-        .badge-intermediate { background: var(--warning); }
-        .badge-advanced { background: var(--danger); }
-
-        .card-description {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .card-actions {
             display: flex;
-            gap: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* BOTÕES DE "EM BREVE" - SUBSTITUÍDOS */
-        .btn-em-breve {
-            flex: 1;
-            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
-            color: #fff;
-            padding: 0.9rem 1.5rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
-        }
-
-        .btn-em-breve:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.6);
-        }
-
-        .btn-info {
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            padding: 0.9rem 1.2rem;
-            border: 2px solid var(--border);
-            border-radius: 10px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-info:hover {
-            border-color: var(--primary);
-            background: var(--primary);
-            color: white;
-        }
-
-        .alert {
-            background: var(--bg-card);
-            border: 2px solid;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .alert-warning {
-            border-color: var(--warning);
-            background: rgba(255, 152, 0, 0.1);
-        }
-
-        .alert-icon {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             flex-shrink: 0;
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
         }
 
-        .alert-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .alert-content p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 2.5rem;
+        /* AVISOS DE RISCO PARA AVANÇADAS */
+        .risk-warning {
+            background: linear-gradient(135deg, 
+                rgba(239, 68, 68, 0.1) 0%, 
+                rgba(147, 51, 234, 0.1) 100%);
+            border: 2px solid var(--danger);
             border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 10px 30px var(--shadow);
-            transition: transform 0.3s ease;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
+        .risk-warning::before {
+            content: '⚠️';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 4rem;
+            opacity: 0.1;
         }
 
-        .stat-value {
-            font-size: 3rem;
+        .risk-title {
+            color: var(--danger);
+            font-size: 1.3rem;
             font-weight: 800;
             margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        .footer {
-            background: var(--bg-card);
-            border-top: 1px solid var(--border);
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-link {
-            color: var(--text-secondary);
-            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            transition: color 0.3s ease;
         }
 
-        .footer-link:hover {
-            color: var(--primary);
-        }
-
+        /* MODAL BLURRY */
         .modal {
             display: none;
             position: fixed;
@@ -508,425 +328,218 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: var(--blur);
             z-index: 9999;
             align-items: center;
             justify-content: center;
-            animation: fadeIn 0.3s ease;
         }
 
         .modal.active {
             display: flex;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .modal-content {
             background: var(--bg-card);
-            border-radius: 20px;
-            padding: 2.5rem;
+            backdrop-filter: var(--blur);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
             max-width: 600px;
             width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            animation: slideUp 0.3s ease;
+            box-shadow: 0 25px 80px rgba(147, 51, 234, 0.3);
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-            color: var(--text-secondary);
-            transition: color 0.3s ease;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-        }
-
-        .modal-close:hover {
-            color: var(--danger);
-            background: var(--bg-secondary);
-        }
-
-        .modal-body {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .modal-body h4 {
-            color: var(--text-primary);
-            margin: 1.5rem 0 0.75rem 0;
-        }
-
-        .modal-body ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .modal-body li {
-            margin-bottom: 0.5rem;
-        }
-
+        /* RESPONSIVO */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
+            .hero h1 { font-size: 3rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 <base target="_blank">
 </head>
 <body>
+    <!-- 🌌 BURACO NEGRO ROXO ANIMADO -->
+    <div class="blackhole"></div>
+
+    <!-- NAVEGAÇÃO -->
     <nav class="navbar">
         <div class="navbar-content">
-            <a href="#" class="logo">
-                <span class="logo-icon">⚡</span>
-                <span>KelvenOptimizer</span>
-            </a>
-            <div class="nav-links">
-                <a href="#optimizations" class="nav-link">📦 Otimizações</a>
-                <!-- 🔄 LINK CORRIGIDO: aponta para o seu GitHub -->
-                <a href="https://github.com/kelvenapk" target="_blank" class="nav-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
-                <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">
+            <a href="#" class="logo">KelvenOptimizer</a>
+            <div>
+                <button class="btn" onclick="toggleTheme()">
                     <span id="themeIcon">🌙</span>
                 </button>
             </div>
         </div>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>KelvenOptimizer</h1>
-            <p>A ferramenta definitiva para otimização total do Windows. Do básico ao avançado, maximize a performance do seu PC com um clique.</p>
+            <p>A ferramenta definitiva para otimização total do Windows com estética futurista. Do básico ao avançado, maximize a performance do seu PC com um clique.</p>
             <div class="hero-buttons">
-                <!-- 🔄 SUBSTITUÍDO: botão "Em Breve" -->
-                <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
+                <button class="btn-em-breve" onclick="showNotification()">
                     🕗 Em Breve
                 </button>
-                <!-- 🔄 SUBSTITUÍDO: link "All-in-One" vira "Notificar-me" -->
-                <button class="btn-secondary" onclick="alert('Lista de espera em breve!')">
+                <button class="btn-primary" onclick="notifyMe()">
                     🔔 Notificar-me
                 </button>
             </div>
         </div>
     </section>
 
+    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-value">10</div>
-                <div class="stat-label">Otimizações Poderosas</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">100%</div>
-                <div class="stat-label">Performance Máxima</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">0</div>
-                <div class="stat-label">Bloatware Tolerado</div>
-            </div>
+        <!-- AVISO GERAL -->
+        <div class="risk-warning">
+            <div class="risk-title">⚠️ IMPORTANTE - Leia Antes de Usar</div>
+            <p>Todas as otimizações modificam configurações do Windows. As otimizações BÁSICAS são seguras para todos. As AVANÇADAS devem ser usadas apenas por usuários experientes. Sempre crie um ponto de restauração antes de executar qualquer otimização.</p>
         </div>
 
-        <div class="alert alert-warning">
-            <div class="alert-icon">⚠️</div>
-            <div class="alert-content">
-                <h3>Importante - Leia Antes de Usar</h3>
-                <p>Todas as otimizações modificam configurações do Windows. As otimizações BÁSICAS são seguras para todos. As AVANÇADAS devem ser usadas apenas por usuários experientes. Sempre crie um ponto de restauração antes de executar qualquer otimização.</p>
-            </div>
-        </div>
-
-        <h2 class="section-title" id="optimizations">🟢 Otimizações BÁSICAS</h2>
-        <p class="section-subtitle">Seguras para todos os usuários. Melhore a performance sem riscos.</p>
+        <!-- OTIMIZAÇÕES BÁSICAS -->
+        <h2 style="font-size: 2.5rem; margin: 3rem 0 2rem 0; background: linear-gradient(135deg, var(--success), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🟢 Otimizações BÁSICAS</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Seguras para todos os usuários. Melhore a performance sem riscos.</p>
 
         <div class="grid">
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">🧹</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Limpeza Básica</h3>
-                        <span class="card-badge badge-basic">BÁSICO</span>
+                    <div>
+                        <h3>Limpeza Básica</h3>
+                        <span style="background: var(--success); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">BÁSICO</span>
                     </div>
                 </div>
-                <p class="card-description">
-                    Remove arquivos temporários, cache, lixeira e prefetch. Libera espaço em disco sem riscos. Pode recuperar vários GB de espaço.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('basic-clean')">ℹ️</button>
+                <p>Remove arquivos temporários, cache, lixeira e prefetch. Libera espaço em disco sem riscos. Pode recuperar vários GB de espaço.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn-em-breve" onclick="showNotification()">🕗 Em Breve</button>
+                    <button class="btn-primary" onclick="showInfo('basic-clean')">ℹ️ Info</button>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">🌐</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Otimizar Rede</h3>
-                        <span class="card-badge badge-basic">BÁSICO</span>
+                    <div>
+                        <h3>Otimizar Rede</h3>
+                        <span style="background: var(--success); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">BÁSICO</span>
                     </div>
                 </div>
-                <p class="card-description">
-                    Limpa cache DNS, ARP e NetBIOS. Melhora velocidade de conexão e resolve problemas de rede. Totalmente seguro e reversível.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('network')">ℹ️</button>
+                <p>Limpa cache DNS, ARP e NetBIOS. Melhora velocidade de conexão e resolve problemas de rede. Totalmente seguro e reversível.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn-em-breve" onclick="showNotification()">🕗 Em Breve</button>
+                    <button class="btn-primary" onclick="showInfo('network')">ℹ️ Info</button>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">🎨</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Desativar Efeitos Visuais</h3>
-                        <span class="card-badge badge-basic">BÁSICO</span>
+                    <div>
+                        <h3>Desativar Efeitos Visuais</h3>
+                        <span style="background: var(--success); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">BÁSICO</span>
                     </div>
                 </div>
-                <p class="card-description">
-                    Remove animações e efeitos visuais desnecessários. Ideal para PCs mais fracos. Pode melhorar performance em até 20%.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('visual')">ℹ️</button>
+                <p>Remove animações e efeitos visuais desnecessários. Ideal para PCs mais fracos. Pode melhorar performance em até 20%.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn-em-breve" onclick="showNotification()">🕗 Em Breve</button>
+                    <button class="btn-primary" onclick="showInfo('visual')">ℹ️ Info</button>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">🟡 Otimizações INTERMEDIÁRIAS</h2>
-        <p class="section-subtitle">Para usuários experientes. Otimizações mais profundas do sistema.</p>
-
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">⚙️</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Otimizar Serviços</h3>
-                        <span class="card-badge badge-intermediate">INTERMEDIÁRIO</span>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Desabilita serviços desnecessários do Windows. Reduz uso de RAM e CPU em segundo plano. Pode economizar até 2GB de RAM.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('services')">ℹ️</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🚀</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Otimizar Inicialização</h3>
-                        <span class="card-badge badge-intermediate">INTERMEDIÁRIO</span>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Remove programas desnecessários da inicialização. Acelera o boot do Windows em até 50%. Você escolhe o que manter.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('startup')">ℹ️</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">📋</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Limpar Registro</h3>
-                        <span class="card-badge badge-intermediate">INTERMEDIÁRIO</span>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Remove entradas órfãs do registro. Melhora tempo de resposta do sistema. Backup automático incluído.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('registry')">ℹ️</button>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="section-title">🔴 Otimizações AVANÇADAS</h2>
-        <p class="section-subtitle">Somente para especialistas. Use por sua conta e risco.</p>
+        <!-- OTIMIZAÇÕES AVANÇADAS COM RISCO -->
+        <h2 style="font-size: 2.5rem; margin: 3rem 0 2rem 0; background: linear-gradient(135deg, var(--danger), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🔴 Otimizações AVANÇADAS</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">⚠️ Somente para especialistas. <strong>USO POR SUA RESPONSABILIDADE!</strong></p>
 
         <div class="grid">
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">💻</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Otimização Extrema CPU</h3>
-                        <span class="card-badge badge-advanced">AVANÇADO</span>
+                    <div>
+                        <h3>Otimização Extrema CPU</h3>
+                        <span style="background: var(--danger); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">AVANÇADO</span>
                     </div>
                 </div>
-                <p class="card-description">
-                    Ajusta configurações de energia, desativa mitigações de vulnerabilidade e otimiza agendador de CPU. +15% performance.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('cpu')">ℹ️</button>
+                <p><strong>⚠️ USO POR SUA RESPONSABILIDADE!</strong> Ajusta configurações de energia, desativa mitigações de vulnerabilidade e otimiza agendador de CPU. +15% performance.</p>
+                <div class="risk-warning">
+                    <div class="risk-title">🚨 RISCOS:</div>
+                    <ul style="margin-left: 1rem; color: var(--text-secondary);">
+                        <li>Maior consumo de energia</li>
+                        <li>Reduz proteção contra vulnerabilidades</li>
+                        <li>Pode causar instabilidade</li>
+                    </ul>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn-em-breve" onclick="showNotification()">🕗 Em Breve</button>
+                    <button class="btn-primary" onclick="showInfo('cpu')">ℹ️ Info</button>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">🧠</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Otimização Extrema RAM</h3>
-                        <span class="card-badge badge-advanced">AVANÇADO</span>
+                    <div>
+                        <h3>Otimização Extrema RAM</h3>
+                        <span style="background: var(--danger); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">AVANÇADO</span>
                     </div>
                 </div>
-                <p class="card-description">
-                    Ajusta arquivo de paginação, limpa standby list, desativa superfetch e indexação. Melhor para 16GB+ RAM.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('ram')">ℹ️</button>
+                <p><strong>⚠️ USO POR SUA RESPONSABILIDADE!</strong> Ajusta arquivo de paginação, limpa standby list, desativa superfetch e indexação. Melhor para 16GB+ RAM.</p>
+                <div class="risk-warning">
+                    <div class="risk-title">🚨 RISCOS:</div>
+                    <ul style="margin-left: 1rem; color: var(--text-secondary);">
+                        <li>Recomendado apenas para 16GB+ RAM</li>
+                        <li>Pode causar problemas em PCs com pouca RAM</li>
+                        <li>SSD recomendado</li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🎮</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Modo Gaming Extremo</h3>
-                        <span class="card-badge badge-advanced">AVANÇADO</span>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Desativa DVR, telemetria, Windows Update, indexação e otimiza latência para jogos. Máxima performance.
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('gaming')">ℹ️</button>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn-em-breve" onclick="showNotification()">🕗 Em Breve</button>
+                    <button class="btn-primary" onclick="showInfo('ram')">ℹ️ Info</button>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">⚡</div>
-                    <div class="card-content">
-                        <h3 class="card-title">ULTIMATE MODE</h3>
-                        <span class="card-badge badge-advanced">AVANÇADO</span>
+                    <div>
+                        <h3>ULTIMATE MODE</h3>
+                        <span style="background: var(--danger); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">AVANÇADO</span>
                     </div>
                 </div>
-                <p class="card-description">
-                    TODAS as otimizações combinadas. Máxima performance, mas pode causar instabilidade. Use por sua conta e risco!
-                </p>
-                <div class="card-actions">
-                    <!-- 🔄 SUBSTITUÍDO: download vira "Em Breve" -->
-                    <button class="btn-em-breve" onclick="alert('Aguarde o lançamento oficial!')">
-                        🕗 Em Breve
-                    </button>
-                    <button class="btn-info" onclick="showInfo('ultimate')">ℹ️</button>
+                <p><strong>⚠️ USO POR SUA RESPONSABILIDADE!</strong> TODAS as otimizações combinadas. Máxima performance, mas pode causar instabilidade severa!</p>
+                <div class="risk-warning">
+                    <div class="risk-title">🚨🚨🚨 RISCOS CRÍTICOS:</div>
+                    <ul style="margin-left: 1rem; color: var(--text-secondary);">
+                        <li><strong>PODE CAUSAR INSTABILIDADE SEVERA!</strong></li>
+                        <li>Sistema fica VULNERÁVEL</li>
+                        <li>Windows Update desabilitado</li>
+                        <li>Proteções de segurança removidas</li>
+                    </ul>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="btn-em-breve" onclick="showNotification()">🕗 Em Breve</button>
+                    <button class="btn-primary" onclick="showInfo('ultimate')">ℹ️ Info</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://github.com/kelvenapk" target="_blank" class="footer-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://github.com/kelvenapk/kelvenoptimizer/issues" target="_blank" class="footer-link">
-                    🐛 Reportar Bug
-                </a>
-                <a href="https://github.com/kelvenapk/kelvenoptimizer/blob/main/LICENSE" target="_blank" class="footer-link">
-                    📄 Licença
-                </a>
-            </div>
-            <p style="color: var(--text-secondary); margin-top: 1rem;">
-                © 2024 KelvenOptimizer. Desenvolvido com ⚡ por Kelven
-            </p>
-        </div>
-    </footer>
-
+    <!-- MODAL -->
     <div class="modal" id="infoModal">
         <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="modalTitle"></h3>
-                <button class="modal-close" onclick="closeModal()">×</button>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h3 id="modalTitle"></h3>
+                <button class="btn" onclick="closeModal()" style="background: var(--danger); color: white;">✕</button>
             </div>
-            <div class="modal-body" id="modalBody"></div>
+            <div id="modalBody"></div>
         </div>
     </div>
 
+    <!-- JAVASCRIPT -->
     <script>
-        // Theme Toggle
+        // TEMA
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
@@ -936,273 +549,48 @@
             localStorage.setItem('theme', newTheme);
         }
 
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        document.getElementById('themeIcon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        // NOTIFICAÇÕES
+        function showNotification() {
+            alert('🕗 Aguarde o lançamento oficial do KelvenOptimizer!');
+        }
 
-        // Modal Info (já traduzido)
-        const infoData = {
-            'basic-clean': {
-                title: '🧹 Limpeza Básica',
-                content: `
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Remove arquivos temporários do usuário e do Windows</li>
-                        <li>Limpa cache do sistema</li>
-                        <li>Esvazia a lixeira</li>
-                        <li>Remove arquivos de prefetch</li>
-                        <li>Limpa thumbnails</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Libera espaço em disco (pode recuperar vários GB)</li>
-                        <li>Melhora performance geral</li>
-                        <li>100% seguro e reversível</li>
-                    </ul>
-                    <h4>Como usar:</h4>
-                    <p>1. Baixe o arquivo .bat<br>2. Clique com botão direito e selecione "Executar como Administrador"<br>3. Aguarde a conclusão</p>
-                `
-            },
-            'network': {
-                title: '🌐 Otimizar Rede',
-                content: `
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Limpa cache DNS</li>
-                        <li>Limpa cache ARP</li>
-                        <li>Reseta NetBIOS</li>
-                        <li>Renova configurações de IP</li>
-                        <li>Reseta Winsock</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Resolve problemas de conexão</li>
-                        <li>Melhora velocidade da internet</li>
-                        <li>Corrige erros de DNS</li>
-                    </ul>
-                    <h4>Como usar:</h4>
-                    <p>1. Feche todos os navegadores<br>2. Execute como Administrador<br>3. Pode ser necessário reiniciar o PC</p>
-                `
-            },
-            'visual': {
-                title: '🎨 Desativar Efeitos Visuais',
-                content: `
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Desativa animações de janelas</li>
-                        <li>Remove efeitos de transparência</li>
-                        <li>Desabilita sombras</li>
-                        <li>Otimiza para performance</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Melhora performance em até 20%</li>
-                        <li>Ideal para PCs mais antigos</li>
-                        <li>Reduz uso de GPU/CPU</li>
-                    </ul>
-                    <h4>Como usar:</h4>
-                    <p>Execute como Administrador. As mudanças são aplicadas imediatamente e podem ser revertidas pelas configurações do Windows.</p>
-                `
-            },
-            'services': {
-                title: '⚙️ Otimizar Serviços',
-                content: `
-                    <h4>⚠️ ATENÇÃO: Nível Intermediário</h4>
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Desabilita serviços desnecessários</li>
-                        <li>Reduz processos em segundo plano</li>
-                        <li>Otimiza uso de RAM</li>
-                    </ul>
-                    <h4>Serviços afetados:</h4>
-                    <ul>
-                        <li>Superfetch/SysMain</li>
-                        <li>Windows Search</li>
-                        <li>Print Spooler (se não usa impressora)</li>
-                        <li>Telemetria</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Economiza até 2GB de RAM</li>
-                        <li>Reduz uso de CPU em idle</li>
-                        <li>Melhora tempo de resposta</li>
-                    </ul>
-                `
-            },
-            'startup': {
-                title: '🚀 Otimizar Inicialização',
-                content: `
-                    <h4>⚠️ ATENÇÃO: Nível Intermediário</h4>
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Analisa programas na inicialização</li>
-                        <li>Remove itens desnecessários</li>
-                        <li>Otimiza ordem de carregamento</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Reduz tempo de boot em até 50%</li>
-                        <li>Menos programas em segundo plano</li>
-                        <li>PC mais responsivo após ligar</li>
-                    </ul>
-                    <h4>Como usar:</h4>
-                    <p>O script mostrará uma lista de programas na inicialização. Você poderá escolher quais desabilitar.</p>
-                `
-            },
-            'registry': {
-                title: '📋 Limpar Registro',
-                content: `
-                    <h4>⚠️ ATENÇÃO: Nível Intermediário</h4>
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Remove entradas órfãs do registro</li>
-                        <li>Limpa chaves de programas desinstalados</li>
-                        <li>Remove extensões inválidas</li>
-                        <li>Cria backup automático antes</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Melhora tempo de resposta</li>
-                        <li>Reduz tamanho do registro</li>
-                        <li>Sistema mais limpo</li>
-                    </ul>
-                    <h4>Segurança:</h4>
-                    <p>Um backup completo do registro é criado automaticamente na área de trabalho antes de qualquer modificação.</p>
-                `
-            },
-            'cpu': {
-                title: '💻 Otimização Extrema CPU',
-                content: `
-                    <h4>🔴 ATENÇÃO: NÍVEL AVANÇADO</h4>
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Ativa plano de energia "Alto Desempenho"</li>
-                        <li>Desativa mitigações Spectre/Meltdown</li>
-                        <li>Otimiza agendador de CPU</li>
-                        <li>Desativa Core Parking</li>
-                        <li>Prioriza foreground apps</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>+15% performance em CPU</li>
-                        <li>Melhor para gaming/edição</li>
-                        <li>Reduz latência</li>
-                    </ul>
-                    <h4>⚠️ RISCOS:</h4>
-                    <ul>
-                        <li>Maior consumo de energia</li>
-                        <li>Reduz proteção contra vulnerabilidades</li>
-                        <li>Use apenas se souber o que está fazendo</li>
-                    </ul>
-                `
-            },
-            'ram': {
-                title: '🧠 Otimização Extrema RAM',
-                content: `
-                    <h4>🔴 ATENÇÃO: NÍVEL AVANÇADO</h4>
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Otimiza arquivo de paginação</li>
-                        <li>Desativa Superfetch completamente</li>
-                        <li>Limpa Standby List</li>
-                        <li>Desativa indexação</li>
-                        <li>Otimiza cache de sistema</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Mais RAM disponível</li>
-                        <li>Melhor para sistemas com 16GB+</li>
-                        <li>Reduz uso de disco</li>
-                    </ul>
-                    <h4>⚠️ REQUISITOS:</h4>
-                    <ul>
-                        <li>Recomendado para 16GB+ de RAM</li>
-                        <li>Pode causar problemas em PCs com pouca RAM</li>
-                        <li>SSD recomendado</li>
-                    </ul>
-                `
-            },
-            'gaming': {
-                title: '🎮 Modo Gaming Extremo',
-                content: `
-                    <h4>🔴 ATENÇÃO: NÍVEL AVANÇADO - RISCO ALTO</h4>
-                    <h4>O que faz:</h4>
-                    <ul>
-                        <li>Desativa Xbox Game DVR</li>
-                        <li>Desabilita Windows Update temporariamente</li>
-                        <li>Remove telemetria completamente</li>
-                        <li>Desativa indexação</li>
-                        <li>Otimiza prioridade de jogos</li>
-                        <li>Reduz latência de rede para gaming</li>
-                        <li>Desativa notificações</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>Máxima performance em jogos</li>
-                        <li>FPS mais estáveis</li>
-                        <li>Menor input lag</li>
-                        <li>Sem interrupções durante gameplay</li>
-                    </ul>
-                    <h4>⚠️ RISCOS IMPORTANTES:</h4>
-                    <ul>
-                        <li>Windows Update desabilitado (sistema vulnerável)</li>
-                        <li>Alguns recursos do Windows param de funcionar</li>
-                        <li>Use apenas durante sessões de jogo</li>
-                        <li>REVERTA após jogar!</li>
-                    </ul>
-                `
-            },
-            'ultimate': {
-                title: '⚡ ULTIMATE MODE',
-                content: `
-                    <h4>🔴🔴🔴 ATENÇÃO MÁXIMA: RISCO EXTREMO 🔴🔴🔴</h4>
-                    <h4>O que faz:</h4>
-                    <p><strong>TODAS as otimizações anteriores COMBINADAS!</strong></p>
-                    <ul>
-                        <li>Limpeza completa do sistema</li>
-                        <li>Otimização total de CPU e RAM</li>
-                        <li>Desativação de serviços não essenciais</li>
-                        <li>Modo gaming ativado</li>
-                        <li>Registro completamente otimizado</li>
-                        <li>Todas as proteções desabilitadas</li>
-                    </ul>
-                    <h4>Benefícios:</h4>
-                    <ul>
-                        <li>🚀 MÁXIMA PERFORMANCE ABSOLUTA</li>
-                        <li>100% dos recursos para suas tarefas</li>
-                        <li>Sistema extremamente responsivo</li>
-                    </ul>
-                    <h4>⚠️⚠️⚠️ RISCOS CRÍTICOS:</h4>
-                    <ul>
-                        <li><strong>PODE CAUSAR INSTABILIDADE SEVERA</strong></li>
-                        <li><strong>Sistema fica VULNERÁVEL</strong></li>
-                        <li><strong>Alguns programas podem parar de funcionar</strong></li>
-                        <li><strong>Windows Update desabilitado</strong></li>
-                        <li><strong>Proteções de segurança removidas</strong></li>
-                    </ul>
-                    <h4>🛡️ ANTES DE EXECUTAR:</h4>
-                    <ul>
-                        <li>✅ CRIE UM PONTO DE RESTAURAÇÃO</li>
-                        <li>✅ Faça backup de dados importantes</li>
-                        <li>✅ Tenha um pendrive de instalação do Windows</li>
-                        <li>✅ Use apenas se for REALMENTE especialista</li>
-                    </ul>
-                    <p style="color: var(--danger); font-weight: bold; margin-top: 1rem;">
-                        Este modo é para usuários MUITO experientes que sabem exatamente o que estão fazendo e aceitam TODOS os riscos!
-                    </p>
-                `
-            }
-        };
+        function notifyMe() {
+            localStorage.setItem('kelvenoptimizer-notify', 'true');
+            alert('🔔 Você será notificado quando o KelvenOptimizer for lançado!');
+        }
 
+        // MODAL
         function showInfo(type) {
             const modal = document.getElementById('infoModal');
             const title = document.getElementById('modalTitle');
             const body = document.getElementById('modalBody');
             
-            if (infoData[type]) {
-                title.textContent = infoData[type].title;
-                body.innerHTML = infoData[type].content;
+            const info = {
+                'basic-clean': {
+                    title: '🧹 Limpeza Básica',
+                    content: '<h4>O que faz:</h4><ul><li>Remove arquivos temporários</li><li>Limpa cache do sistema</li><li>Esvazia a lixeira</li><li>Remove prefetch</li></ul><h4>Benefícios:</h4><ul><li>Libera vários GB de espaço</li><li>Melhora performance</li><li>100% seguro</li></ul>'
+                },
+                'network': {
+                    title: '🌐 Otimizar Rede',
+                    content: '<h4>O que faz:</h4><ul><li>Limpa cache DNS</li><li>Limpa cache ARP</li><li>Reseta NetBIOS</li><li>Renova IP</li></ul><h4>Benefícios:</h4><ul><li>Resolve problemas de conexão</li><li>Melhora velocidade</li><li>Corrige erros DNS</li></ul>'
+                },
+                'cpu': {
+                    title: '💻 Otimização CPU',
+                    content: '<h4>⚠️ USO POR SUA RESPONSABILIDADE!</h4><h4>O que faz:</h4><ul><li>Ativa plano "Alto Desempenho"</li><li>Desativa mitigações Spectre/Meltdown</li><li>Otimiza agendador de CPU</li></ul><h4>🚨 RISCOS:</h4><ul><li>Maior consumo de energia</li><li>Reduz proteção contra vulnerabilidades</li><li>Use apenas se souber o que está fazendo!</li></ul>'
+                },
+                'ram': {
+                    title: '🧠 Otimização RAM',
+                    content: '<h4>⚠️ USO POR SUA RESPONSABILIDADE!</h4><h4>O que faz:</h4><ul><li>Otimiza arquivo de paginação</li><li>Desativa Superfetch</li><li>Limpa Standby List</li></ul><h4>🚨 REQUISITOS:</h4><ul><li>Recomendado para 16GB+ RAM</li><li>Pode causar problemas em PCs fracos</li><li>SSD recomendado</li></ul>'
+                },
+                'ultimate': {
+                    title: '⚡ ULTIMATE MODE',
+                    content: '<h4>🔴🔴🔴 ATENÇÃO MÁXIMA! 🔴🔴🔴</h4><h4>🚨 USO POR SUA RESPONSABILIDADE!</h4><p><strong>TODAS as otimizações COMBINADAS!</strong></p><h4>⚠️ RISCOS CRÍTICOS:</h4><ul><li><strong>PODE CAUSAR INSTABILIDADE SEVERA!</strong></li><li>Sistema fica VULNERÁVEL</li><li>Windows Update desabilitado</li><li>Proteções removidas</li></ul><h4>✅ ANTES DE EXECUTAR:</h4><ul><li>Crie ponto de restauração</li><li>Faça backup de dados</li><li>Tenha pendave de instalação do Windows</li></ul>'
+                }
+            };
+            
+            if (info[type]) {
+                title.innerHTML = info[type].title;
+                body.innerHTML = info[type].content;
                 modal.classList.add('active');
             }
         }
@@ -1211,25 +599,14 @@
             document.getElementById('infoModal').classList.remove('active');
         }
 
-        // Close modal on click outside
-        document.getElementById('infoModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
+        // INICIALIZAÇÃO
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.getElementById('themeIcon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        // FECHAR MODAL AO CLICAR FORA
+        document.getElementById('infoModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
         });
     </script>
 </body>
