@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KelvenOptimizer - 35+ Otimizações Premium</title>
     <meta name="description" content="Ferramenta profissional com 35+ otimizações premium para Windows. Estética futurista com gradientes roxos e efeitos visuais avançados.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22  viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
     <style>
         /* 🎨 ESTÉTICA PREMIUM ROXA E FUTURISTA - ESTILO ORIGINAL */
@@ -31,7 +31,7 @@
             --bg-secondary: #ffffff;
             --bg-card: rgba(255, 255, 255, 0.95);
             --text-primary: #1a1a1a;
-            --text-secondary: #666666;
+            --text-secondary: #0a0a0a;
             --border: rgba(147, 51, 234, 0.15);
             --shadow: rgba(0, 0, 0, 0.1);
         }
@@ -178,6 +178,17 @@
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
         }
 
         .btn-em-breve {
@@ -462,10 +473,11 @@
             }
         }
     </style>
+    <base target="_blank">
 <base target="_blank">
 </head>
 <body>
-    <div class="bg-fixed"></div>
+    <div class="bg-professional"></div>
 
     <!-- 🎯 NAVEGAÇÃO PREMIUM -->
     <nav class="navbar">
@@ -490,13 +502,11 @@
                     Do básico ao ultra-avançado, maximize seu PC com estilo.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-primary" onclick="downloadScript('ultimate-mode.bat')">
+                        <span>⬇️</span><span>Baixar ULTIMATE MODE</span>
                     </button>
-                    <button class="btn btn-primary" onclick="notifyMe()">
-                        <span>🔔</span>
-                        <span>Notificar-me</span>
+                    <button class="btn btn-secondary" onclick="notifyMe()">
+                        <span>🔔</span><span>Notificar-me</span>
                     </button>
                 </div>
             </div>
@@ -533,13 +543,11 @@
                     Libera espaço em disco sem riscos.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('limpeza-de-sistema.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('basic-clean')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('limpeza-de-sistema')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -557,13 +565,11 @@
                     Melhora velocidade de conexão.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('otimizacao-de-rede.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('network')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('otimizacao-de-rede')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -581,13 +587,11 @@
                     Ideal para PCs mais fracos.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('efeitos-visuais.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('visual')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('efeitos-visuais')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -616,13 +620,11 @@
                     <div class="warning-text">⚠️ Requer conhecimento técnico</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('servicos-do-windows.ps1')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('services')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('servicos-do-windows')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -640,13 +642,11 @@
                     Acelera boot em até 50%.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('inicializacao.ps1')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('startup')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('inicializacao')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -667,13 +667,11 @@
                     <div class="warning-text">⚠️ Cuidado com registro</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('registro-do-sistema.ps1')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('registry')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('registro-do-sistema')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -698,13 +696,11 @@
                     Ativa MSI Mode para GPUs. Reduz latência DPC e melhora performance em jogos.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('msi-mode.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('msi-mode')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -721,13 +717,11 @@
                     Ajusta resolução do timer para 0.5ms. Reduz input lag e melhora responsividade.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('timer-resolution.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('timer-resolution')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -744,13 +738,11 @@
                     Desativa HPET completamente. Reduz latência e melhora performance em jogos competitivos.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('hpet-disable.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('hpet-disable')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -779,13 +771,11 @@
                     <div class="warning-text">🚨 USO POR SUA RESPONSABILIDADE!</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('cpu-extrema.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('cpu')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('cpu-extrema')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -806,13 +796,11 @@
                     <div class="warning-text">🚨 USO POR SUA RESPONSABILIDADE!</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('ram-extrema.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('ram')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('ram-extrema')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -833,13 +821,11 @@
                     <div class="warning-text">🚨🚨🚨 RISCOS CRÍTICOS!</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('ultimate-mode.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
-                    <button class="btn btn-secondary btn-small" onclick="showInfo('ultimate')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('ultimate-mode')">
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -917,7 +903,7 @@
                     <button class="btn btn-secondary btn-small" onclick="showInfo('anticheat-optimizer')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
-                    </button>
+                    </</button>
                 </div>
             </div>
         </div>
@@ -1018,13 +1004,11 @@
                     Modifica parâmetros do kernel do Windows. Reduz latência de sistema em nível profundo.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('kernel-latency-fix.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('kernel-latency-fix')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1041,13 +1025,11 @@
                     Otimiza afindade de interrupções. Reduz DPC latency e melhora responsividade do sistema.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('interrupt-affinity.ps1')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('interrupt-affinity')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1064,13 +1046,11 @@
                     Gerenciamento de memória em nível kernel. Large pages, memory compression ajustada e cache otimizado.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('memory-management-extreme.ps1')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('memory-management-extreme')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1087,13 +1067,11 @@
                     Desativa mitigações Spectre/Meltdown completamente. Performance máxima, mas reduz segurança.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('spectre-meltdown-disable.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('spectre-meltdown-disable')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1118,13 +1096,11 @@
                     Maxima duração de bateria. Desativa serviços que consomem energia mantendo performance aceitável.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('battery-saver-pro.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('battery-saver-pro')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1141,13 +1117,11 @@
                     Previne thermal throttling em notebooks. Mantém performance estável por mais tempo.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('thermal-throttle-fix.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('thermal-throttle-fix')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1164,13 +1138,11 @@
                     Otimiza carregamento para preservar bateria. Reduz desgaste e aumenta vida útil.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('charger-optimizer.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('charger-optimizer')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1187,13 +1159,11 @@
                     Gerenciamento avançado de energia. Equilibra performance e duração de bateria inteligentemente.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
+                    <button class="btn btn-download btn-small" onclick="downloadScript('power-management-pro.bat')">
+                        <span>⬇️</span><span>Baixar Script</span>
                     </button>
                     <button class="btn btn-secondary btn-small" onclick="showInfo('power-management-pro')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
+                        <span>ℹ️</span><span>Detalhes</span>
                     </button>
                 </div>
             </div>
@@ -1224,6 +1194,16 @@
             localStorage.setItem('theme', newTheme);
         }
 
+        // Função para download de scripts
+        function downloadScript(filename) {
+            const link = document.createElement('a');
+            link.href = `scripts/${filename}`;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
         // Notificações com estética premium
         function showNotification() {
             alert('🕗 KelvenOptimizer - Em breve! Aguarde o lançamento oficial.');
@@ -1241,15 +1221,140 @@
             const body = document.getElementById('modalBody');
             
             const infoData = {
-                // ... (informações anteriores) ...
-                
-                // 🆕 INFORMAÇÕES PREMIUM DAS NOVAS OTIMIZAÇÕES
+                'limpeza-de-sistema': {
+                    title: '🧹 Limpeza de Sistema - BÁSICO',
+                    content: `
+                        <h4>🎯 O que limpa:</h4>
+                        <ul>
+                            <li>Arquivos temporários do sistema (%temp%)</li>
+                            <li>Cache do Windows (C:\Windows\Temp)</li>
+                            <li>Prefetch (C:\Windows\Prefetch)</li>
+                            <li>Cache de navegadores (Chrome, Edge, Firefox)</li>
+                            <li>Logs de crash e eventos</li>
+                            <li>Arquivos recentes e lixeira</li>
+                            <li>Restos de apps desinstalados</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Libera espaço em disco (2-8GB)</li>
+                            <li>Melhora performance geral</li>
+                            <li>Reduz travamentos</li>
+                            <li>Mantém login do navegador</li>
+                        </ul>
+                        <p><strong>Seguro:</strong> Não remove apps da Store</p>
+                    `
+                },
+                'otimizacao-de-rede': {
+                    title: '🌐 Otimização de Rede - BÁSICO',
+                    content: `
+                        <h4>🎯 O que otimiza:</h4>
+                        <ul>
+                            <li>Cache DNS, ARP e NetBIOS</li>
+                            <li>TCP/IP stack</li>
+                            <li>Configurações de latência</li>
+                            <li>Buffer de rede</li>
+                            <li>Nagle's algorithm</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Melhora velocidade de conexão</li>
+                            <li>Reduz latência em jogos</li>
+                            <li>Melhora estabilidade da conexão</li>
+                            <li>Sem afetar apps da Store</li>
+                        </ul>
+                        <p><strong>Compatível:</strong> Todas as conexões</p>
+                    `
+                },
+                'efeitos-visuais': {
+                    title: '🎨 Efeitos Visuais - BÁSICO',
+                    content: `
+                        <h4>🎯 O que desativa:</h4>
+                        <ul>
+                            <li>Animações de janelas</li>
+                            <li>Transparências do Aero</li>
+                            <li>Sombras e efeitos 3D</li>
+                            <li>Animações de menus</li>
+                            <li>Visual FX pesados</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Melhora performance em PCs fracos</li>
+                            <li>Reduz uso de GPU</li>
+                            <li>Mantém funcionalidade</li>
+                            <li>Interface mais rápida</li>
+                        </ul>
+                        <p><strong>Reversível:</strong> Pode ser ativado novamente</p>
+                    `
+                },
+                'servicos-do-windows': {
+                    title: '⚙️ Serviços do Windows - INTERMEDIÁRIO',
+                    content: `
+                        <h4>🎯 O que desativa:</h4>
+                        <ul>
+                            <li>Windows Error Reporting</li>
+                            <li>Telemetria e DiagTrack</li>
+                            <li>Maps Broker</li>
+                            <li>Fax (se existir)</li>
+                            <li>Geolocation Service</li>
+                            <li>Internet Connection Sharing</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Reduz uso de RAM e CPU</li>
+                            <li>Melhora boot</li>
+                            <li>Mais privacidade</li>
+                            <li>Sem afetar funcionalidade</li>
+                        </ul>
+                        <p><strong>Seguro:</strong> Mantém serviços críticos</p>
+                    `
+                },
+                'inicializacao': {
+                    title: '🚀 Inicialização - INTERMEDIÁRIO',
+                    content: `
+                        <h4>🎯 O que remove:</h4>
+                        <ul>
+                            <li>Programas desnecessários do startup</li>
+                            <li>Apps que iniciam com Windows</li>
+                            <li>Atalhos de apps antigos</li>
+                            <li>Programas não essenciais</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Boot até 50% mais rápido</li>
+                            <li>Menos uso de RAM</li>
+                            <li>Sistema mais responsivo</li>
+                            <li>Mantém apps essenciais</li>
+                        </ul>
+                        <p><strong>Inteligente:</strong> Mantém antivirus e drivers</p>
+                    `
+                },
+                'registro-do-sistema': {
+                    title: '📋 Registro do Sistema - INTERMEDIÁRIO',
+                    content: `
+                        <h4>🎯 O que limpa:</h4>
+                        <ul>
+                            <li>MRU (Most Recently Used)</li>
+                            <li>Caminhos digitados</li>
+                            <li>Cache de shell (MuiCache)</li>
+                            <li>Diálogos abertos/salvos</li>
+                            <li>Entradas órfãs seguras</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Melhora tempo de resposta</li>
+                            <li>Reduz erres de registro</li>
+                            <li>Mantém registro limpo</li>
+                            <li>Sem afetar apps instalados</li>
+                        </ul>
+                        <p><strong>Seguro:</strong> Mantém apps e drivers</p>
+                    `
+                },
                 'msi-mode': {
                     title: '⚡ MSI Mode - TWEAK AVANÇADO',
                     content: `
                         <h4>🎯 O que faz:</h4>
                         <ul>
-                            <li>Ativa Message Signaled Interrupts para GPU e dispositivos</li>
+                            <li>Ativa Message Signaled Interrupts para GPU</li>
                             <li>Reduz DPC latency de 1000μs para 100μs</li>
                             <li>Melhora responsividade em jogos competitivos</li>
                             <li>Reduz stuttering e micro-lags</li>
@@ -1264,46 +1369,109 @@
                         <p><strong>Compatível:</strong> Todas as GPUs modernas (GTX 900+ / RX 400+)</p>
                     `
                 },
-                'valorant-mode': {
-                    title: '🎯 Valorant Mode - PRO GAMING',
+                'timer-resolution': {
+                    title: '🔧 Timer Resolution - TWEAK AVANÇADO',
                     content: `
-                        <h4>🎯 Otimizações específicas:</h4>
+                        <h4>🎯 O que faz:</h4>
                         <ul>
-                            <li>Timer resolution ajustado para 0.5ms</li>
-                            <li>MSI mode ativado para GPU</li>
-                            <li>HPET desativado</li>
-                            <li>Network otimizado para 128 tick</li>
-                            <li>CPU priorizada para Valorant</li>
-                        </ul>
-                        <h4>💡 Benefícios comprovados:</h4>
-                        <ul>
-                            <li>Hit registration melhorada</li>
-                            <li>Peeker's advantage reduzido</li>
-                            <li>Spray mais consistente</li>
-                            <li>Audio mais preciso</li>
-                        </ul>
-                        <p><strong>Testado em:</strong> Radiant, Immortal, Diamond players</p>
-                    `
-                },
-                'premiere-optimizer': {
-                    title: '🎬 Premiere Pro Optimizer - WORKSTATION',
-                    content: `
-                        <h4>🎯 Otimizações específicas:</h4>
-                        <ul>
-                            <li>Cache de disco otimizado para SSD NVMe</li>
-                            <li>Memory alocada aumentada para 75% RAM</li>
-                            <li>GPU decoding priorizado</li>
-                            <li>Background rendering otimizado</li>
-                            <li>Disk cache gerenciado inteligentemente</li>
+                            <li>Ajusta resolução do timer para 0.5ms</li>
+                            <li>Reduz input lag em jogos</li>
+                            <li>Melhora responsividade do sistema</li>
+                            <li>Otimiza quantum de tempo</li>
                         </ul>
                         <h4>💡 Benefícios:</h4>
                         <ul>
-                            <li>Render 40% mais rápido</li>
-                            <li>Playback mais fluido</li>
-                            <li>Menos travamentos</li>
-                            <li>Exportação mais rápida</li>
+                            <li>Input lag reduzido</li>
+                            <li>Sistema mais responsivo</li>
+                            <li>Ideal para jogos competitivos</li>
+                            <li>Sem afetar apps</li>
                         </ul>
-                        <p><strong>Ideal para:</strong> Editores profissionais, YouTubers, criadores de conteúdo</p>
+                        <p><strong>Compatível:</strong> Windows 10/11</p>
+                    `
+                },
+                'hpet-disable': {
+                    title: '💎 HPET Disable - TWEAK AVANÇADO',
+                    content: `
+                        <h4>🎯 O que faz:</h4>
+                        <ul>
+                            <li>Desativa High Precision Event Timer</li>
+                            <li>Reduz latência de sistema</li>
+                            <li>Melhora timing em jogos</li>
+                            <li>Otimiza clock do sistema</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Latência reduzida</li>
+                            <li>Melhor para jogos competitivos</li>
+                            <li>Sistema mais responsivo</li>
+                            <li>Sem afetar funcionalidade</li>
+                        </ul>
+                        <p><strong>Reversível:</strong> Pode ser ativado novamente</p>
+                    `
+                },
+                'cpu-extrema': {
+                    title: '💻 CPU Extrema - AVANÇADO',
+                    content: `
+                        <h4>🎯 O que faz:</h4>
+                        <ul>
+                            <li>Ativa plano de alta performance</li>
+                            <li>Otimiza CPU para máxima performance</li>
+                            <li>Desativa节能模式</li>
+                            <li>Ajusta parâmetros de energia</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>+15% performance</li>
+                            <li>CPU sempre em máxima frequência</li>
+                            <li>Ideal para jogos e renderização</li>
+                            <li>Sem throttling</li>
+                        </ul>
+                        <p><strong>Atenção:</strong> Maior consumo de energia</p>
+                    `
+                },
+                'ram-extrema': {
+                    title: '🧠 RAM Extrema - AVANÇADO',
+                    content: `
+                        <h4>🎯 O que faz:</h4>
+                        <ul>
+                            <li>Otimiza gerenciamento de memória</li>
+                            <li>Desativa serviços pesados</li>
+                            <li>Ajusta cache e buffers</li>
+                            <li>Libera RAM desnecessária</li>
+                        </ul>
+                        <h4>💡 Benefícios:</h4>
+                        <ul>
+                            <li>Mais RAM disponível</li>
+                            <li>Menos travamentos</li>
+                            <li>Melhor multitarefa</li>
+                            <li>Ideal para 16GB+</li>
+                        </ul>
+                        <p><strong>Ideal para:</strong> PCs com 16GB+ RAM</p>
+                    `
+                },
+                'ultimate-mode': {
+                    title: '⚡ ULTIMATE MODE - EXTREMO',
+                    content: `
+                        <h4>🎯 O que faz:</h4>
+                        <ul>
+                            <li>Executa TODAS as otimizações</li>
+                            <li>CPU Extrema + RAM Extrema</li>
+                            <li>MSI Mode + HPET Disable</li>
+                            <li>Limpeza + Rede + Serviços</li>
+                        </ul>
+                        <h4>💡 Benefícios máximos:</h4>
+                        <ul>
+                            <li>Performance máxima absoluta</li>
+                            <li>+25% FPS em jogos</li>
+                            <li>Sistema extremamente responsivo</li>
+                            <li>Ideal para competições</li>
+                        </ul>
+                        <div style="background: rgba(239, 68, 68, 0.2); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                            <h4 style="color: var(--danger);">⚠️ RISCOS CRÍTICOS:</h4>
+                            <p style="color: var(--danger); margin: 0;">
+                                Use apenas se for expert e tiver backup!
+                            </p>
+                        </div>
                     `
                 },
                 'battery-saver-pro': {
@@ -1363,22 +1531,3 @@
                 body.innerHTML = '<p>Informações sobre esta otimização em breve.</p>';
             }
             
-            modal.classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('infoModal').classList.remove('active');
-        }
-
-        // Inicialização com estética premium
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        document.getElementById('themeIcon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-
-        // Fechar modal ao clicar fora com estética premium
-        document.getElementById('infoModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-    </script>
-</body>
-</html>
