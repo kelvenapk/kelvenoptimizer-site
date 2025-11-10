@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KelvenOptimizer - Maximize seu PC 🌌</title>
+    <title>KelvenOptimizer - Otimização Profissional de Sistema</title>
+    <meta name="description" content="Ferramenta profissional para otimização avançada do Windows. 15+ otimizações especializadas para máxima performance.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
     <style>
+        /* 🎨 TEMA PROFISSIONAL CORRIGIDO */
         :root {
             --primary: #9333ea;
             --secondary: #7c3aed;
@@ -14,23 +16,22 @@
             --success: #10b981;
             --warning: #f59e0b;
             --danger: #ef4444;
-            --bg-main: #000000;
-            --bg-secondary: #0a0a0a;
-            --bg-card: rgba(10, 10, 10, 0.8);
+            --bg-main: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-card: rgba(26, 26, 26, 0.9);
             --text-primary: #ffffff;
-            --text-secondary: #a78bfa;
+            --text-secondary: #b8b8b8;
             --border: rgba(147, 51, 234, 0.2);
-            --shadow: rgba(147, 51, 234, 0.15);
-            --blur: blur(10px);
+            --shadow: rgba(0, 0, 0, 0.5);
         }
 
         [data-theme="light"] {
-            --bg-main: #f8fafc;
+            --bg-main: #f5f5f5;
             --bg-secondary: #ffffff;
-            --bg-card: rgba(255, 255, 255, 0.9);
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --border: rgba(147, 51, 234, 0.15);
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --border: rgba(147, 51, 234, 0.1);
             --shadow: rgba(0, 0, 0, 0.1);
         }
 
@@ -41,15 +42,15 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-main);
             color: var(--text-primary);
-            transition: all 0.3s ease;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .bg-professional {
+        /* 🌌 BACKGROUND FIXO */
+        .bg-fixed {
             position: fixed;
             top: 0;
             left: 0;
@@ -57,58 +58,21 @@
             height: 100%;
             background: 
                 radial-gradient(circle at 20% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
             z-index: -1;
         }
 
-        .hero-image {
-            position: absolute;
-            right: 5%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            animation: float 6s ease-in-out infinite;
-            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.3);
-        }
-
-        .hero-image::before {
-            content: '⚡';
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(-50%) rotate(0deg); }
-            50% { transform: translateY(-60%) rotate(5deg); }
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { filter: brightness(1) drop-shadow(0 0 20px rgba(147, 51, 234, 0.5)); }
-            50% { filter: brightness(1.3) drop-shadow(0 0 40px rgba(147, 51, 234, 0.8)); }
-        }
-
+        /* 🎯 NAVEGAÇÃO FIXA */
         .navbar {
-            background: var(--bg-card);
-            backdrop-filter: var(--blur);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
             z-index: 1000;
-            box-shadow: 0 4px 20px var(--shadow);
-        }
-
-        .navbar-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -117,151 +81,151 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            font-size: 1.8rem;
-            font-weight: 800;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--text-primary);
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 12px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            animation: rotate 3s linear infinite;
+            font-size: 1.2rem;
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
+        /* 🚀 HERO CORRIGIDO */
         .hero {
-            padding: 6rem 2rem;
-            text-align: left;
-            position: relative;
-            overflow: hidden;
-            min-height: 80vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
+            padding: 6rem 2rem 4rem;
             background: linear-gradient(135deg, 
                 rgba(147, 51, 234, 0.05) 0%, 
-                rgba(124, 58, 237, 0.03) 50%, 
-                rgba(236, 72, 153, 0.03) 100%);
+                rgba(124, 58, 237, 0.03) 100%);
+            position: relative;
         }
 
         .hero-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .hero h1 {
+        .hero-text h1 {
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 1.5rem;
             line-height: 1.1;
         }
 
-        .hero h1 .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--accent), var(--secondary));
+        .hero-text .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            font-weight: 300;
-            max-width: 600px;
+            margin-bottom: 2rem;
+            max-width: 500px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 0.875rem 1.75rem;
             border: none;
             border-radius: 8px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
+            transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
+            text-decoration: none;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
-            border: 1px solid rgba(147, 51, 234, 0.3);
+            box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(147, 51, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-primary);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
         }
 
         .btn-em-breve {
             background: linear-gradient(135deg, #ff9800, #f57c00);
             color: white;
-            box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3);
-            animation: pulse-orange 2s infinite;
+            animation: pulse 2s infinite;
         }
 
-        @keyframes pulse-orange {
-            0% { box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3); }
-            50% { box-shadow: 0 8px 35px rgba(255, 152, 0, 0.6); }
-            100% { box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3); }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3); }
+            50% { box-shadow: 0 8px 25px rgba(255, 152, 0, 0.6); }
         }
 
+        /* 🎭 ELEMENTO VISUAL */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-icon {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* 📊 SEÇÕES DE OTIMIZAÇÃO */
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
-            position: relative;
-            z-index: 1;
         }
 
         .section-header {
-            margin-bottom: 3rem;
             text-align: center;
+            margin-bottom: 3rem;
         }
 
         .section-title {
             font-size: 2.5rem;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 1rem;
-            display: inline-block;
             position: relative;
+            display: inline-block;
         }
 
         .section-title::after {
@@ -285,26 +249,23 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-bottom: 4rem;
         }
 
         .card {
             background: var(--bg-card);
-            backdrop-filter: var(--blur);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius: 12px;
+            padding: 1.5rem;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 25px var(--shadow);
+            backdrop-filter: blur(10px);
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.2);
+            box-shadow: 0 10px 30px var(--shadow);
             border-color: var(--primary);
         }
 
@@ -312,37 +273,34 @@
             display: flex;
             align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .card-icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             flex-shrink: 0;
-            box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
         }
 
         .card-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
         }
 
         .card-badge {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             color: white;
             margin-bottom: 0.5rem;
         }
@@ -350,48 +308,40 @@
         .badge-basic { background: var(--success); }
         .badge-intermediate { background: var(--warning); }
         .badge-advanced { background: var(--danger); }
-        .badge-expert { background: #dc2626; }
 
         .card-description {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
         }
 
         .card-actions {
             display: flex;
-            gap: 1rem;
-            align-items: center;
+            gap: 0.75rem;
         }
 
-        .risk-warning {
-            background: linear-gradient(135deg, 
-                rgba(239, 68, 68, 0.1) 0%, 
-                rgba(147, 51, 234, 0.05) 100%);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 12px;
-            padding: 1rem;
-            margin: 1rem 0;
-            position: relative;
-        }
-
-        .risk-title {
-            color: var(--danger);
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .risk-content {
+        .btn-small {
+            padding: 0.5rem 1rem;
             font-size: 0.85rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
+            border-radius: 6px;
         }
 
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .warning-text {
+            color: var(--danger);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* 🎯 MODAL SIMPLIFICADO */
         .modal {
             display: none;
             position: fixed;
@@ -400,46 +350,37 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: var(--blur);
             z-index: 9999;
             align-items: center;
             justify-content: center;
-            animation: modal-fade 0.3s ease;
         }
 
         .modal.active {
             display: flex;
         }
 
-        @keyframes modal-fade {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .modal-content {
             background: var(--bg-card);
-            backdrop-filter: var(--blur);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            max-width: 600px;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
             width: 90%;
             max-height: 80vh;
             overflow-y: auto;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
         }
 
         .modal-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
+            align-items: center;
+            margin-bottom: 1rem;
         }
 
         .modal-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .modal-close {
@@ -448,8 +389,12 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--text-secondary);
-            padding: 0.5rem;
-            border-radius: 8px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
             transition: all 0.2s;
         }
 
@@ -458,13 +403,33 @@
             background: rgba(239, 68, 68, 0.1);
         }
 
+        .modal-body {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .modal-body h4 {
+            color: var(--text-primary);
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .modal-body ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+
+        .modal-body li {
+            margin-bottom: 0.25rem;
+        }
+
         @media (max-width: 768px) {
-            .hero {
+            .hero-content {
+                grid-template-columns: 1fr;
                 text-align: center;
-                padding: 4rem 1rem;
+                gap: 2rem;
             }
             
-            .hero-image {
+            .hero-visual {
                 display: none;
             }
             
@@ -481,70 +446,66 @@
                 gap: 1.5rem;
             }
             
-            .card {
-                padding: 1.5rem;
+            .container {
+                padding: 2rem 1rem;
             }
         }
     </style>
 <base target="_blank">
 </head>
 <body>
-    <div class="bg-professional"></div>
+    <div class="bg-fixed"></div>
 
+    <!-- 🎯 NAVEGAÇÃO FIXA -->
     <nav class="navbar">
-        <div class="navbar-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">⚡</div>
-                <span>KelvenOptimizer</span>
-            </a>
-            <div>
-                <button class="btn btn-secondary" onclick="toggleTheme()" id="themeToggle">
-                    <span id="themeIcon">🌙</span>
-                </button>
-            </div>
-        </div>
+        <a href="#" class="logo">
+            <div class="logo-icon">⚡</div>
+            <span>KelvenOptimizer</span>
+        </a>
+        <button class="btn btn-secondary" onclick="toggleTheme()" id="themeToggle">
+            <span id="themeIcon">🌙</span>
+        </button>
     </nav>
 
+    <!-- 🚀 HERO PROFISSIONAL -->
     <section class="hero">
         <div class="hero-content">
-            <h1>
-                <span style="color: var(--text-primary);">Kelven</span><span class="gradient-text">Optimizer</span>
-            </h1>
-            <p class="hero-subtitle">
-                A ferramenta definitiva para otimização total do Windows. 
-                Do básico ao avançado, maximize a performance do seu PC com um clique.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-em-breve" onclick="showNotification()">
-                    <span>🕗</span>
-                    <span>Em Breve</span>
-                </button>
-                <button class="btn btn-primary" onclick="notifyMe()">
-                    <span>🔔</span>
-                    <span>Notificar-me</span>
-                </button>
+            <div class="hero-text">
+                <h1>
+                    <span style="color: var(--text-primary);">Kelven</span><span class="gradient-text">Optimizer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A ferramenta definitiva para otimização total do Windows. 
+                    Do básico ao avançado, maximize a performance do seu PC com um clique.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-em-breve" onclick="showNotification()">
+                        <span>🕗</span>
+                        <span>Em Breve</span>
+                    </button>
+                    <button class="btn btn-primary" onclick="notifyMe()">
+                        <span>🔔</span>
+                        <span>Notificar-me</span>
+                    </button>
+                </div>
             </div>
-        </div>
-        
-        <div class="hero-image">
-            ⚡
+            <div class="hero-visual">
+                <div class="floating-icon">⚡</div>
+            </div>
         </div>
     </section>
 
+    <!-- 📊 CONTEÚDO PRINCIPAL -->
     <div class="container">
-        <div class="risk-warning">
-            <div class="risk-title">⚠️ IMPORTANTE - Leia Antes de Usar</div>
-            <div class="risk-content">
-                Todas as otimizações modificam configurações do Windows. 
-                As otimizações BÁSICAS são seguras para todos. 
-                As INTERMEDIÁRIAS e AVANÇADAS devem ser usadas apenas por usuários experientes. 
-                Sempre crie um ponto de restauração antes de executar qualquer otimização.
-            </div>
+        <!-- ⚠️ AVISO -->
+        <div class="warning-box">
+            <div class="warning-text">⚠️ IMPORTANTE: Sempre crie um ponto de restauração antes de executar otimizações avançadas.</div>
         </div>
 
+        <!-- 🟢 OTIMIZAÇÕES BÁSICAS -->
         <div class="section-header">
             <h2 class="section-title">🟢 Otimizações Básicas</h2>
-            <p class="section-subtitle">Seguras para todos os usuários. Melhore a performance sem riscos.</p>
+            <p class="section-subtitle">Seguras para todos os usuários</p>
         </div>
 
         <div class="grid">
@@ -558,14 +519,14 @@
                 </div>
                 <p class="card-description">
                     Remove arquivos temporários, cache, lixeira e prefetch. 
-                    Libera espaço em disco sem riscos. Pode recuperar vários GB de espaço.
+                    Libera espaço em disco sem riscos.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('basic-clean')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('basic-clean')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -582,14 +543,14 @@
                 </div>
                 <p class="card-description">
                     Limpa cache DNS, ARP e NetBIOS. 
-                    Melhora velocidade de conexão e resolve problemas de rede. Totalmente seguro.
+                    Melhora velocidade de conexão.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('network')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('network')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -606,14 +567,14 @@
                 </div>
                 <p class="card-description">
                     Remove animações e efeitos visuais desnecessários. 
-                    Ideal para PCs mais fracos. Pode melhorar performance em até 20%.
+                    Ideal para PCs mais fracos.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('visual')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('visual')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -621,9 +582,10 @@
             </div>
         </div>
 
+        <!-- 🟡 INTERMEDIÁRIAS -->
         <div class="section-header">
             <h2 class="section-title">🟡 Otimizações Intermediárias</h2>
-            <p class="section-subtitle">Para usuários com conhecimento técnico. Otimizações mais profundas do sistema.</p>
+            <p class="section-subtitle">Para usuários com conhecimento técnico</p>
         </div>
 
         <div class="grid">
@@ -636,22 +598,18 @@
                     </div>
                 </div>
                 <p class="card-description">
-                    Desabilita serviços desnecessários do Windows. 
-                    Reduz uso de RAM e CPU em segundo plano. Pode economizar até 2GB de RAM.
+                    Desabilita serviços desnecessários. 
+                    Reduz uso de RAM e CPU.
                 </p>
-                <div class="risk-warning">
-                    <div class="risk-title">⚠️ Requer Conhecimento Técnico</div>
-                    <div class="risk-content">
-                        Esta otimização desabilita serviços do Windows. 
-                        Use apenas se entender as implicações.
-                    </div>
+                <div class="warning-box">
+                    <div class="warning-text">⚠️ Requer conhecimento técnico</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('services')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('services')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -667,15 +625,15 @@
                     </div>
                 </div>
                 <p class="card-description">
-                    Remove programas desnecessários da inicialização. 
-                    Acelera o boot do Windows em até 50%. Você escolhe o que manter.
+                    Remove programas da inicialização. 
+                    Acelera boot em até 50%.
                 </p>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('startup')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('startup')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -692,21 +650,17 @@
                 </div>
                 <p class="card-description">
                     Remove entradas órfãs do registro. 
-                    Melhora tempo de resposta do sistema. Backup automático incluído.
+                    Melhora tempo de resposta.
                 </p>
-                <div class="risk-warning">
-                    <div class="risk-title">⚠️ Cuidado com Registro</div>
-                    <div class="risk-content">
-                        Modificações no registro são irreversíveis sem backup. 
-                        Backup automático é criado antes da execução.
-                    </div>
+                <div class="warning-box">
+                    <div class="warning-text">⚠️ Cuidado com registro</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('registry')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('registry')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -714,9 +668,10 @@
             </div>
         </div>
 
+        <!-- 🔴 AVANÇADAS -->
         <div class="section-header">
             <h2 class="section-title">🔴 Otimizações Avançadas</h2>
-            <p class="section-subtitle">Somente para especialistas. Use por sua conta e risco.</p>
+            <p class="section-subtitle">Somente para especialistas</p>
         </div>
 
         <div class="grid">
@@ -729,22 +684,18 @@
                     </div>
                 </div>
                 <p class="card-description">
-                    Ajusta configurações de energia, desativa mitigações de vulnerabilidade 
-                    e otimiza agendador de CPU. +15% performance.
+                    Ajusta configurações de energia e otimiza CPU. 
+                    +15% performance.
                 </p>
-                <div class="risk-warning">
-                    <div class="risk-title">🚨 USO POR SUA RESPONSABILIDADE!</div>
-                    <div class="risk-content">
-                        Maior consumo de energia. Reduz proteção contra vulnerabilidades. 
-                        Use apenas se souber o que está fazendo!
-                    </div>
+                <div class="warning-box">
+                    <div class="warning-text">🚨 USO POR SUA RESPONSABILIDADE!</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('cpu')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('cpu')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -760,22 +711,18 @@
                     </div>
                 </div>
                 <p class="card-description">
-                    Ajusta arquivo de paginação, limpa standby list, desativa superfetch 
-                    e indexação. Melhor para 16GB+ RAM.
+                    Otimiza memória e desativa recursos. 
+                    Melhor para 16GB+ RAM.
                 </p>
-                <div class="risk-warning">
-                    <div class="risk-title">🚨 USO POR SUA RESPONSABILIDADE!</div>
-                    <div class="risk-content">
-                        Recomendado para 16GB+ RAM. Pode causar problemas em PCs fracos. 
-                        SSD recomendado.
-                    </div>
+                <div class="warning-box">
+                    <div class="warning-text">🚨 USO POR SUA RESPONSABILIDADE!</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('ram')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('ram')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -792,21 +739,17 @@
                 </div>
                 <p class="card-description">
                     <strong>TODAS as otimizações combinadas.</strong> 
-                    Máxima performance absoluta, mas pode causar instabilidade severa!
+                    Máxima performance absoluta!
                 </p>
-                <div class="risk-warning">
-                    <div class="risk-title">🚨🚨🚨 RISCOS CRÍTICOS!</div>
-                    <div class="risk-content">
-                        <strong>PODE CAUSAR INSTABILIDADE SEVERA!</strong><br>
-                        Sistema fica VULNERÁVEL. Use apenas se for REALMENTE especialista!
-                    </div>
+                <div class="warning-box">
+                    <div class="warning-text">🚨🚨🚨 RISCOS CRÍTICOS!</div>
                 </div>
                 <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
+                    <button class="btn btn-em-breve btn-small" onclick="showNotification()">
                         <span>🕗</span>
                         <span>Em Breve</span>
                     </button>
-                    <button class="btn btn-secondary" onclick="showInfo('ultimate')">
+                    <button class="btn btn-secondary btn-small" onclick="showInfo('ultimate')">
                         <span>ℹ️</span>
                         <span>Detalhes</span>
                     </button>
@@ -815,17 +758,21 @@
         </div>
     </div>
 
+    <!-- 🎯 MODAL SIMPLIFICADO -->
     <div class="modal" id="infoModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title" id="modalTitle"></h3>
+                <h3 class="modal-title" id="modalTitle">Informações</h3>
                 <button class="modal-close" onclick="closeModal()">✕</button>
             </div>
-            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-body" id="modalBody">
+                <p>Carregando informações...</p>
+            </div>
         </div>
     </div>
 
     <script>
+        // Sistema de temas
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
@@ -835,6 +782,7 @@
             localStorage.setItem('theme', newTheme);
         }
 
+        // Notificações
         function showNotification() {
             alert('🕗 KelvenOptimizer - Em breve! Aguarde o lançamento oficial.');
         }
@@ -844,157 +792,152 @@
             alert('🔔 Você será notificado quando o KelvenOptimizer for lançado!');
         }
 
+        // Sistema de informações simplificado
         function showInfo(type) {
             const modal = document.getElementById('infoModal');
             const title = document.getElementById('modalTitle');
             const body = document.getElementById('modalBody');
             
-            const info = {
+            const infoData = {
                 'basic-clean': {
                     title: '🧹 Limpeza de Sistema',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
-                            <li>Remove arquivos temporários do usuário (%temp%)</li>
-                            <li>Limpa cache do Windows (temp, prefetch, recent)</li>
-                            <li>Esvazia a lixeira reciclável</li>
-                            <li>Remove arquivos de log antigos</li>
-                            <li>Limpa cache de thumbnails</li>
+                            <li>Remove arquivos temporários</li>
+                            <li>Limpa cache do sistema</li>
+                            <li>Esvazia lixeira</li>
+                            <li>Remove logs antigos</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
-                            <li>Libera espaço em disco (pode recuperar 5-15GB)</li>
-                            <li>Melhora performance geral do sistema</li>
-                            <li>100% seguro e reversível</li>
+                            <li>Libera espaço (5-15GB)</li>
+                            <li>Melhora performance</li>
+                            <li>100% seguro</li>
                         </ul>
-                        <p><strong>Como usar:</strong> Execute como administrador e aguarde conclusão.</p>
                     `
                 },
                 'network': {
                     title: '🌐 Otimização de Rede',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
-                            <li>Limpa cache DNS completamente</li>
+                            <li>Limpa cache DNS</li>
                             <li>Reseta cache ARP</li>
-                            <li>Renova configurações de IP</li>
-                            <li>Reseta Winsock e NetBIOS</li>
+                            <li>Renova configurações IP</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
                             <li>Resolve problemas de conexão</li>
-                            <li>Melhora velocidade de navegação</li>
-                            <li>Corrige erros de DNS</li>
+                            <li>Melhora velocidade</li>
+                            <li>Corrige erros DNS</li>
                         </ul>
-                        <p><strong>Importante:</strong> Feche navegadores antes de executar.</p>
                     `
                 },
                 'visual': {
-                    title: '🎨 Desativar Efeitos Visuais',
+                    title: '🎨 Efeitos Visuais',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
-                            <li>Desativa animações de janelas</li>
-                            <li>Remove transparências e efeitos Aero</li>
-                            <li>Desabilita sombras e efeitos visuais</li>
+                            <li>Desativa animações</li>
+                            <li>Remove transparências</li>
+                            <li>Otimiza para performance</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
-                            <li>Melhora performance em até 20%</li>
-                            <li>Ideal para PCs mais antigos</li>
-                            <li>Sistema mais responsivo</li>
+                            <li>Melhora performance 20%</li>
+                            <li>Ideal PCs fracos</li>
+                            <li>Mais responsivo</li>
                         </ul>
-                        <p><strong>Como aplicar:</strong> Mudanças são aplicadas imediatamente.</p>
                     `
                 },
                 'services': {
                     title: '⚙️ Serviços do Windows',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
-                            <li>Analisa serviços em execução no sistema</li>
                             <li>Desabilita serviços não essenciais</li>
                             <li>Reduz processos em segundo plano</li>
+                            <li>Otimiza inicialização</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
-                            <li>Economiza até 2GB de RAM</li>
-                            <li>Reduz uso de CPU em idle</li>
-                            <li>PC mais responsivo</li>
+                            <li>Economiza até 2GB RAM</li>
+                            <li>Reduz uso CPU</li>
+                            <li>Mais responsivo</li>
                         </ul>
-                        <p><strong>Segurança:</strong> Mostra quais são seguros de desativar. Você escolhe.</p>
+                        <p><strong>Nota:</strong> Você escolhe quais desabilitar.</p>
                     `
                 },
                 'startup': {
-                    title: '🚀 Otimizar Inicialização',
+                    title: '🚀 Inicialização',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
                             <li>Analisa programas na inicialização</li>
-                            <li>Mostra impacto de cada programa</li>
-                            <li>Permite escolher o que manter ou remover</li>
+                            <li>Remove itens desnecessários</li>
+                            <li>Otimiza ordem de carregamento</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
-                            <li>Reduz tempo de boot em até 50%</li>
+                            <li>Boot 50% mais rápido</li>
                             <li>PC liga mais rápido</li>
-                            <li>Mais RAM disponível</li>
+                            <li>Menos programas rodando</li>
                         </ul>
-                        <p><strong>Processo:</strong> Mostra lista completa com descrição.</p>
                     `
                 },
                 'registry': {
-                    title: '📋 Limpar Registro',
+                    title: '📋 Registro do Sistema',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
-                            <li>Remove entradas órfãs do registro</li>
-                            <li>Limpa chaves de programas desinstalados</li>
-                            <li>Remove extensões inválidas</li>
+                            <li>Remove entradas órfãs</li>
+                            <li>Limpa chaves inválidas</li>
+                            <li>Remove extensões quebradas</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
-                            <li>Melhora tempo de resposta do sistema</li>
+                            <li>Melhora tempo de resposta</li>
                             <li>Sistema mais limpo</li>
-                            <li>Pode resolver erros</li>
+                            <li>Resolve erros</li>
                         </ul>
-                        <p><strong>Segurança:</strong> Backup automático incluído.</p>
+                        <p><strong>Segurança:</strong> Backup automático criado.</p>
                     `
                 },
                 'cpu': {
                     title: '💻 CPU Extrema',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
-                            <li>Ativa plano de energia "Alto Desempenho"</li>
-                            <li>Desativa mitigações Spectre/Meltdown</li>
-                            <li>Otimiza agendador de CPU</li>
+                            <li>Ativa plano Alto Desempenho</li>
+                            <li>Desativa mitigações</li>
+                            <li>Otimiza agendador</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
-                            <li>+15% performance em CPU</li>
+                            <li>+15% performance</li>
                             <li>Melhor para gaming</li>
                             <li>Reduz latência</li>
                         </ul>
-                        <p><strong>⚠️ RISCOS:</strong> Maior consumo de energia, reduz proteção.</p>
+                        <p><strong>⚠️ RISCOS:</strong> Maior consumo, reduz proteção.</p>
                     `
                 },
                 'ram': {
                     title: '🧠 RAM Extrema',
                     content: `
-                        <h4>O que esta otimização faz:</h4>
+                        <h4>O que faz:</h4>
                         <ul>
-                            <li>Limpa standby list da memória</li>
-                            <li>Otimiza arquivo de paginação</li>
+                            <li>Limpa standby list</li>
+                            <li>Otimiza paginação</li>
                             <li>Desativa Superfetch</li>
                         </ul>
                         <h4>Benefícios:</h4>
                         <ul>
                             <li>Mais RAM disponível</li>
                             <li>Melhor multitarefa</li>
-                            <li>Reduz travamentos</li>
+                            <li>Menos travamentos</li>
                         </ul>
-                        <p><strong>Requisitos:</strong> Recomendado para 16GB+ RAM.</p>
+                        <p><strong>Requisitos:</strong> 16GB+ RAM recomendado.</p>
                     `
                 },
                 'ultimate': {
@@ -1004,31 +947,33 @@
                         <p><strong>TODAS as otimizações combinadas!</strong></p>
                         <h4>Benefícios:</h4>
                         <ul>
-                            <li>MÁXIMA PERFORMANCE ABSOLUTA</li>
-                            <li>100% dos recursos liberados</li>
-                            <li>Sistema extremamente responsivo</li>
+                            <li>MÁXIMA PERFORMANCE</li>
+                            <li>100% recursos liberados</li>
+                            <li>Sistema extremamente rápido</li>
                         </ul>
-                        <h4>🚨 RISCOS CRÍTICOS:</h4>
-                        <ul style="color: var(--danger);">
-                            <li>PODE CAUSAR INSTABILIDADE SEVERA!</li>
-                            <li>Sistema fica VULNERÁVEL</li>
-                            <li>Windows Update DESABILITADO</li>
-                        </ul>
-                        <p><strong>OBRIGATÓRIO:</strong> Criar ponto de restauração antes!</p>
+                        <div style="background: rgba(239, 68, 68, 0.2); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                            <h4 style="color: var(--danger);">⚠️ RISCOS CRÍTICOS:</h4>
+                            <ul style="color: var(--danger); margin: 0;">
+                                <li>PODE CAUSAR INSTABILIDADE!</li>
+                                <li>Sistema fica VULNERÁVEL</li>
+                                <li>Windows Update DESABILITADO</li>
+                            </ul>
+                        </div>
+                        <p><strong>OBRIGATÓRIO:</strong> Criar ponto de restauração!</p>
                     `
                 }
             };
             
-            if (info[type]) {
-                title.innerHTML = info[type].title;
-                body.innerHTML = info[type].content;
-                modal.classList.add('active');
+            // Verifica se o tipo existe, senão mostra mensagem padrão
+            if (infoData[type]) {
+                title.textContent = infoData[type].title;
+                body.innerHTML = infoData[type].content;
             } else {
-                // Caso não encontre o tipo, mostra mensagem padrão
-                title.innerHTML = 'ℹ️ Informações';
-                body.innerHTML = '<p>Informações detalhadas sobre esta otimização.</p>';
-                modal.classList.add('active');
+                title.textContent = 'ℹ️ Informações';
+                body.innerHTML = '<p>Informações sobre esta otimização em breve.</p>';
             }
+            
+            modal.classList.add('active');
         }
 
         function closeModal() {
