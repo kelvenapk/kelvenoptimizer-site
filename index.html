@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KelvenOptimizer - Otimização Profissional de Sistema</title>
-    <meta name="description" content="Ferramenta profissional para otimização avançada do Windows. 15+ otimizações especializadas para máxima performance.">
+    <title>KelvenOptimizer - Maximize seu PC 🌌</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
     <style>
-        /* 🎨 TEMA PROFISSIONAL PRETO COM DETALHES ROXOS */
         :root {
             --primary: #9333ea;
             --secondary: #7c3aed;
@@ -51,7 +49,6 @@
             overflow-x: hidden;
         }
 
-        /* 🌌 BACKGROUND PROFSSIONAL */
         .bg-professional {
             position: fixed;
             top: 0;
@@ -65,7 +62,6 @@
             z-index: -1;
         }
 
-        /* 🎭 IMAGEM ILUSTRATIVA NO HERO */
         .hero-image {
             position: absolute;
             right: 5%;
@@ -98,7 +94,6 @@
             50% { filter: brightness(1.3) drop-shadow(0 0 40px rgba(147, 51, 234, 0.8)); }
         }
 
-        /* 🎯 NAVEGAÇÃO PROFSSIONAL */
         .navbar {
             background: var(--bg-card);
             backdrop-filter: var(--blur);
@@ -133,7 +128,7 @@
             width: 40px;
             height: 40px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 10px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -146,7 +141,6 @@
             to { transform: rotate(360deg); }
         }
 
-        /* 🚀 HERO PROFISSIONAL */
         .hero {
             padding: 6rem 2rem;
             text-align: left;
@@ -195,11 +189,10 @@
             flex-wrap: wrap;
         }
 
-        /* 🔥 BOTÕES PROFISSIONAIS ULTRA REDONDOS */
         .btn {
             padding: 1rem 2rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 8px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
@@ -250,7 +243,6 @@
             100% { box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3); }
         }
 
-        /* 📊 SEÇÕES DE OTIMIZAÇÃO */
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -298,7 +290,6 @@
             margin-bottom: 4rem;
         }
 
-        /* 🎴 CARDS PROFISSIONAIS */
         .card {
             background: var(--bg-card);
             backdrop-filter: var(--blur);
@@ -374,7 +365,6 @@
             align-items: center;
         }
 
-        /* ⚠️ AVISOS DE RISCO */
         .risk-warning {
             background: linear-gradient(135deg, 
                 rgba(239, 68, 68, 0.1) 0%, 
@@ -402,7 +392,6 @@
             line-height: 1.4;
         }
 
-        /* 🎯 MODAL PROFISSIONAL */
         .modal {
             display: none;
             position: fixed;
@@ -469,7 +458,6 @@
             background: rgba(239, 68, 68, 0.1);
         }
 
-        /* 📱 RESPONSIVO */
         @media (max-width: 768px) {
             .hero {
                 text-align: center;
@@ -501,10 +489,8 @@
 <base target="_blank">
 </head>
 <body>
-    <!-- 🌌 BACKGROUND PROFISSIONAL -->
     <div class="bg-professional"></div>
 
-    <!-- 🎯 NAVEGAÇÃO PROFISSIONAL -->
     <nav class="navbar">
         <div class="navbar-content">
             <a href="#" class="logo">
@@ -512,24 +498,21 @@
                 <span>KelvenOptimizer</span>
             </a>
             <div>
-                <button class="btn btn-secondary" onclick="toggleTheme()">
+                <button class="btn btn-secondary" onclick="toggleTheme()" id="themeToggle">
                     <span id="themeIcon">🌙</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- 🚀 HERO PROFISSIONAL -->
     <section class="hero">
         <div class="hero-content">
             <h1>
-                Otimização Profissional de 
-                <span class="gradient-text">Windows</span>
+                <span style="color: var(--text-primary);">Kelven</span><span class="gradient-text">Optimizer</span>
             </h1>
             <p class="hero-subtitle">
-                Ferramenta especializada com 15+ otimizações avançadas. 
-                Desde limpeza básica até otimizações de nível empresarial. 
-                Maximize a performance do seu PC com segurança e precisão.
+                A ferramenta definitiva para otimização total do Windows. 
+                Do básico ao avançado, maximize a performance do seu PC com um clique.
             </p>
             <div class="hero-buttons">
                 <button class="btn btn-em-breve" onclick="showNotification()">
@@ -543,15 +526,12 @@
             </div>
         </div>
         
-        <!-- 🎭 IMAGEM ILUSTRATIVA PROFISSIONAL -->
         <div class="hero-image">
             ⚡
         </div>
     </section>
 
-    <!-- 📊 CONTEÚDO PRINCIPAL -->
     <div class="container">
-        <!-- ⚠️ AVISO PROFISSIONAL -->
         <div class="risk-warning">
             <div class="risk-title">⚠️ IMPORTANTE - Leia Antes de Usar</div>
             <div class="risk-content">
@@ -562,7 +542,6 @@
             </div>
         </div>
 
-        <!-- 🟢 OTIMIZAÇÕES BÁSICAS -->
         <div class="section-header">
             <h2 class="section-title">🟢 Otimizações Básicas</h2>
             <p class="section-subtitle">Seguras para todos os usuários. Melhore a performance sem riscos.</p>
@@ -640,81 +619,8 @@
                     </button>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🗑️</div>
-                    <div>
-                        <div class="card-badge badge-basic">Básico</div>
-                        <h3 class="card-title">Limpeza de Disco</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Analisa e remove arquivos desnecessários do sistema. 
-                    Inclui logs antigos, atualizações antigas e arquivos temporários do Windows.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('disk-cleanup')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🔍</div>
-                    <div>
-                        <div class="card-badge badge-basic">Básico</div>
-                        <h3 class="card-title">Otimização de Busca</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimiza o índice de busca do Windows. 
-                    Reduz uso de CPU e disco em segundo plano sem afetar a funcionalidade.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('search')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🛡️</div>
-                    <div>
-                        <div class="card-badge badge-basic">Básico</div>
-                        <h3 class="card-title">Segurança Otimizada</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Remove vulnerabilidades conhecidas sem afetar segurança. 
-                    Desativa recursos desnecessários que consomem recursos.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('security')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
         </div>
 
-        <!-- 🟡 OTIMIZAÇÕES INTERMEDIÁRIAS -->
         <div class="section-header">
             <h2 class="section-title">🟡 Otimizações Intermediárias</h2>
             <p class="section-subtitle">Para usuários com conhecimento técnico. Otimizações mais profundas do sistema.</p>
@@ -806,81 +712,8 @@
                     </button>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">💾</div>
-                    <div>
-                        <div class="card-badge badge-intermediate">Intermediário</div>
-                        <h3 class="card-title">Memória e Cache</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Limpa cache de memória, otimiza standby list e 
-                    ajusta parâmetros de memória para melhor performance.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('memory')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🔧</div>
-                    <div>
-                        <div class="card-badge badge-intermediate">Intermediário</div>
-                        <h3 class="card-title">Sistema de Arquivos</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimiza o sistema de arquivos NTFS. 
-                    Desativa recursos desnecessários e melhora velocidade de acesso.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('filesystem')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🌐</div>
-                    <div>
-                        <div class="card-badge badge-intermediate">Intermediário</div>
-                        <h3 class="card-title">Internet Avançada</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimizações avançadas de TCP/IP. 
-                    Melhora latência, throughput e estabilidade da conexão.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('tcp-ip')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
         </div>
 
-        <!-- 🔴 OTIMIZAÇÕES AVANÇADAS -->
         <div class="section-header">
             <h2 class="section-title">🔴 Otimizações Avançadas</h2>
             <p class="section-subtitle">Somente para especialistas. Use por sua conta e risco.</p>
@@ -951,40 +784,9 @@
 
             <div class="card">
                 <div class="card-header">
-                    <div class="card-icon">🎮</div>
-                    <div>
-                        <div class="card-badge badge-advanced">Avançado</div>
-                        <h3 class="card-title">Gaming Extremo</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Desativa DVR, telemetria, Windows Update, indexação e 
-                    otimiza latência para jogos. Máxima performance.
-                </p>
-                <div class="risk-warning">
-                    <div class="risk-title">🚨 USO POR SUA RESPONSABILIDADE!</div>
-                    <div class="risk-content">
-                        Windows Update desabilitado (vulnerável). 
-                        Reverter após jogar é obrigatório!
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('gaming')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
                     <div class="card-icon">⚡</div>
                     <div>
-                        <div class="card-badge badge-expert">Expert</div>
+                        <div class="card-badge badge-advanced">Avançado</div>
                         <h3 class="card-title">ULTIMATE MODE</h3>
                     </div>
                 </div>
@@ -1011,161 +813,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- 🔧 OTIMIZAÇÕES ESPECIALIZADAS -->
-        <div class="section-header">
-            <h2 class="section-title">🔧 Otimizações Especializadas</h2>
-            <p class="section-subtitle">Otimizações específicas para casos de uso especiais.</p>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🎮</div>
-                    <div>
-                        <div class="card-badge badge-intermediate">Gaming</div>
-                        <h3 class="card-title">Modo Gamer Balanceado</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimizações específicas para gaming sem comprometer segurança. 
-                    Melhor para jogos competitivos e casual.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('gamer-balanced')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">💼</div>
-                    <div>
-                        <div class="card-badge badge-basic">Trabalho</div>
-                        <h3 class="card-title">Modo Produtividade</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimiza para trabalho e produtividade. 
-                    Prioriza aplicações de escritório e reduz latência de entrada.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('productivity')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🎨</div>
-                    <div>
-                        <div class="card-badge badge-intermediate">Criativo</div>
-                        <h3 class="card-title">Modo Criativo</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimizado para editores de vídeo, imagem e áudio. 
-                    Prioriza aplicações criativas e otimiza memória para renderização.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('creative')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🔋</div>
-                    <div>
-                        <div class="card-badge badge-basic">Notebook</div>
-                        <h3 class="card-title">Modo Bateria</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Maxima duração de bateria para notebooks. 
-                    Desativa recursos que consomem muita energia mantendo performance aceitável.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('battery')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">🖥️</div>
-                    <div>
-                        <div class="card-badge badge-intermediate">Servidor</div>
-                        <h3 class="card-title">Modo Servidor</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimizações para PCs usados como servidores locais. 
-                    Prioriza estabilidade e throughput de rede.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('server')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-icon">💾</div>
-                    <div>
-                        <div class="card-badge badge-advanced">SSD/HDD</div>
-                        <h3 class="card-title">Otimização de Disco</h3>
-                    </div>
-                </div>
-                <p class="card-description">
-                    Otimizações específicas para SSD ou HDD. 
-                    TRIM, defragamentação inteligente e alinhamento de partições.
-                </p>
-                <div class="card-actions">
-                    <button class="btn btn-em-breve" onclick="showNotification()">
-                        <span>🕗</span>
-                        <span>Em Breve</span>
-                    </button>
-                    <button class="btn btn-secondary" onclick="showInfo('disk-opt')">
-                        <span>ℹ️</span>
-                        <span>Detalhes</span>
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <!-- 🎯 MODAL PROFISSIONAL -->
     <div class="modal" id="infoModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1176,9 +825,7 @@
         </div>
     </div>
 
-    <!-- 📱 JAVASCRIPT PROFISSIONAL -->
     <script>
-        // 🌙 TEMA PROFISSIONAL
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
@@ -1188,43 +835,15 @@
             localStorage.setItem('theme', newTheme);
         }
 
-        // 🔔 NOTIFICAÇÕES PROFISSIONAIS
         function showNotification() {
-            // Simula notificação profissional
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: linear-gradient(135deg, var(--primary), var(--secondary));
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 12px;
-                box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
-                z-index: 9999;
-                animation: slideIn 0.3s ease;
-            `;
-            notification.innerHTML = `
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span>⚡</span>
-                    <span>KelvenOptimizer - Em Breve!</span>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
+            alert('🕗 KelvenOptimizer - Em breve! Aguarde o lançamento oficial.');
         }
 
         function notifyMe() {
             localStorage.setItem('kelvenoptimizer-notify', 'true');
-            showNotification();
+            alert('🔔 Você será notificado quando o KelvenOptimizer for lançado!');
         }
 
-        // ℹ️ MODAL PROFISSIONAL
         function showInfo(type) {
             const modal = document.getElementById('infoModal');
             const title = document.getElementById('modalTitle');
@@ -1234,179 +853,168 @@
                 'basic-clean': {
                     title: '🧹 Limpeza de Sistema',
                     content: `
-                        <h4>🎯 O que esta otimização faz:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
                             <li>Remove arquivos temporários do usuário (%temp%)</li>
                             <li>Limpa cache do Windows (temp, prefetch, recent)</li>
                             <li>Esvazia a lixeira reciclável</li>
                             <li>Remove arquivos de log antigos</li>
                             <li>Limpa cache de thumbnails</li>
-                            <li>Remove downloads antigos do navegador</li>
                         </ul>
-                        <h4>💡 Benefícios:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
+                        <h4>Benefícios:</h4>
+                        <ul>
                             <li>Libera espaço em disco (pode recuperar 5-15GB)</li>
                             <li>Melhora performance geral do sistema</li>
-                            <li>Reduz tempo de boot</li>
                             <li>100% seguro e reversível</li>
                         </ul>
-                        <h4>⚙️ Como usar:</h4>
-                        <p style="color: var(--text-secondary);">
-                            1. Execute como administrador<br>
-                            2. Aguarde a conclusão (pode levar alguns minutos)<br>
-                            3. Reinicie o PC para efeito completo
-                        </p>
+                        <p><strong>Como usar:</strong> Execute como administrador e aguarde conclusão.</p>
                     `
                 },
                 'network': {
                     title: '🌐 Otimização de Rede',
                     content: `
-                        <h4>🎯 O que esta otimização faz:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
                             <li>Limpa cache DNS completamente</li>
                             <li>Reseta cache ARP</li>
                             <li>Renova configurações de IP</li>
                             <li>Reseta Winsock e NetBIOS</li>
-                            <li>Otimiza parâmetros TCP/IP</li>
                         </ul>
-                        <h4>💡 Benefícios:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
+                        <h4>Benefícios:</h4>
+                        <ul>
                             <li>Resolve problemas de conexão</li>
                             <li>Melhora velocidade de navegação</li>
                             <li>Corrige erros de DNS</li>
-                            <li>Reduz latência em jogos</li>
                         </ul>
-                        <h4>⚠️ Importante:</h4>
-                        <p style="color: var(--text-secondary);">
-                            Feche todos os navegadores antes de executar. 
-                            Pode ser necessário reiniciar o PC após a execução.
-                        </p>
+                        <p><strong>Importante:</strong> Feche navegadores antes de executar.</p>
+                    `
+                },
+                'visual': {
+                    title: '🎨 Desativar Efeitos Visuais',
+                    content: `
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
+                            <li>Desativa animações de janelas</li>
+                            <li>Remove transparências e efeitos Aero</li>
+                            <li>Desabilita sombras e efeitos visuais</li>
+                        </ul>
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>Melhora performance em até 20%</li>
+                            <li>Ideal para PCs mais antigos</li>
+                            <li>Sistema mais responsivo</li>
+                        </ul>
+                        <p><strong>Como aplicar:</strong> Mudanças são aplicadas imediatamente.</p>
+                    `
+                },
+                'services': {
+                    title: '⚙️ Serviços do Windows',
+                    content: `
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
+                            <li>Analisa serviços em execução no sistema</li>
+                            <li>Desabilita serviços não essenciais</li>
+                            <li>Reduz processos em segundo plano</li>
+                        </ul>
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>Economiza até 2GB de RAM</li>
+                            <li>Reduz uso de CPU em idle</li>
+                            <li>PC mais responsivo</li>
+                        </ul>
+                        <p><strong>Segurança:</strong> Mostra quais são seguros de desativar. Você escolhe.</p>
+                    `
+                },
+                'startup': {
+                    title: '🚀 Otimizar Inicialização',
+                    content: `
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
+                            <li>Analisa programas na inicialização</li>
+                            <li>Mostra impacto de cada programa</li>
+                            <li>Permite escolher o que manter ou remover</li>
+                        </ul>
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>Reduz tempo de boot em até 50%</li>
+                            <li>PC liga mais rápido</li>
+                            <li>Mais RAM disponível</li>
+                        </ul>
+                        <p><strong>Processo:</strong> Mostra lista completa com descrição.</p>
+                    `
+                },
+                'registry': {
+                    title: '📋 Limpar Registro',
+                    content: `
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
+                            <li>Remove entradas órfãs do registro</li>
+                            <li>Limpa chaves de programas desinstalados</li>
+                            <li>Remove extensões inválidas</li>
+                        </ul>
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>Melhora tempo de resposta do sistema</li>
+                            <li>Sistema mais limpo</li>
+                            <li>Pode resolver erros</li>
+                        </ul>
+                        <p><strong>Segurança:</strong> Backup automático incluído.</p>
                     `
                 },
                 'cpu': {
-                    title: '💻 CPU Extrema - AVANÇADO',
+                    title: '💻 CPU Extrema',
                     content: `
-                        <h4>🚨 ATENÇÃO - USO POR SUA RESPONSABILIDADE!</h4>
-                        <h4>🔧 O que esta otimização faz:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
                             <li>Ativa plano de energia "Alto Desempenho"</li>
                             <li>Desativa mitigações Spectre/Meltdown</li>
-                            <li>Otimiza agendador de CPU (CPU Scheduler)</li>
-                            <li>Desativa Core Parking</li>
-                            <li>Ajusta prioridade de processos foreground</li>
-                            <li>Otimiza latência de interrupções</li>
+                            <li>Otimiza agendador de CPU</li>
                         </ul>
-                        <h4>📈 Benefícios:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
-                            <li>+15% performance em CPU-bound tasks</li>
-                            <li>Melhor para gaming competitivo</li>
-                            <li>Melhor para renderização e edição</li>
-                            <li>Reduz latência de input</li>
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>+15% performance em CPU</li>
+                            <li>Melhor para gaming</li>
+                            <li>Reduz latência</li>
                         </ul>
-                        <h4>⚠️ RISCOS IMPORTANTES:</h4>
-                        <div style="background: rgba(239, 68, 68, 0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                            <ul style="margin: 0; color: var(--danger);">
-                                <li>Maior consumo de energia (ate 30% mais)</li>
-                                <li>Maior geração de calor</li>
-                                <li>Reduz proteção contra vulnerabilidades Spectre/Meltdown</li>
-                                <li>Pode causar instabilidade em alguns sistemas</li>
-                            </ul>
-                        </div>
-                        <p style="color: var(--text-secondary);">
-                            <strong>RECOMENDADO:</strong> Use apenas se tiver sistema de resfriamento adequado 
-                            e entender os riscos de segurança envolvidos.
-                        </p>
+                        <p><strong>⚠️ RISCOS:</strong> Maior consumo de energia, reduz proteção.</p>
                     `
                 },
-                'gaming': {
-                    title: '🎮 Gaming Extremo - AVANÇADO',
+                'ram': {
+                    title: '🧠 RAM Extrema',
                     content: `
-                        <h4>🚨 ATENÇÃO MÁXIMA - RISCO ALTO!</h4>
-                        <h4>🔧 O que esta otimização faz:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
-                            <li>Desativa completamente Xbox Game DVR</li>
-                            <li>Desabilita Windows Update temporariamente</li>
-                            <li>Remove telemetria e diagnósticos</li>
-                            <li>Desativa indexação de arquivos</li>
-                            <li>Otimiza latência de rede para jogos</li>
-                            <li>Desativa notificações e focus assist</li>
-                            <li>Prioriza processos de jogos em tempo real</li>
+                        <h4>O que esta otimização faz:</h4>
+                        <ul>
+                            <li>Limpa standby list da memória</li>
+                            <li>Otimiza arquivo de paginação</li>
+                            <li>Desativa Superfetch</li>
                         </ul>
-                        <h4>🎯 Benefícios para Gaming:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
-                            <li>FPS mais estáveis e altos</li>
-                            <li>Reduz input lag significativamente</li>
-                            <li>Menos travamentos durante gameplay</li>
-                            <li>Prioridade máxima para jogos</li>
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>Mais RAM disponível</li>
+                            <li>Melhor multitarefa</li>
+                            <li>Reduz travamentos</li>
                         </ul>
-                        <h4>🔴 RISCOS CRÍTICOS:</h4>
-                        <div style="background: rgba(239, 68, 68, 0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                            <ul style="margin: 0; color: var(--danger);">
-                                <li>Windows Update COMPLETAMENTE desabilitado</li>
-                                <li>Sistema fica VULNERÁVEL a ataques</li>
-                                <li>Alguns jogos online podem não funcionar (anti-cheat)</li>
-                                <li>Recursos do Xbox Game Bar param de funcionar</li>
-                            </ul>
-                        </div>
-                        <p style="color: var(--text-secondary);">
-                            <strong>OBRIGATÓRIO:</strong> Reverter após terminar de jogar! 
-                            Nunca deixe ativado por mais de algumas horas.
-                        </p>
+                        <p><strong>Requisitos:</strong> Recomendado para 16GB+ RAM.</p>
                     `
                 },
                 'ultimate': {
-                    title: '⚡ ULTIMATE MODE - EXPERT ONLY!',
+                    title: '⚡ ULTIMATE MODE',
                     content: `
-                        <h4>🔴🔴🔴 ATENÇÃO MÁXIMA - RISCO EXTREMO! 🔴🔴🔴</h4>
-                        <div style="background: rgba(239, 68, 68, 0.2); padding: 1rem; border-radius: 8px; margin: 1rem 0; border: 2px solid var(--danger);">
-                            <h4 style="color: var(--danger); margin: 0;">🚨 TODAS AS OTIMIZAÇÕES COMBINADAS!</h4>
-                            <p style="color: var(--danger); margin: 0.5rem 0 0 0;">
-                                Esta opção executa TODAS as otimizações anteriores SIMULTANEAMENTE!
-                            </p>
-                        </div>
-                        
-                        <h4>💥 O que é executado:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
-                            <li>Todas as otimizações básicas (limpeza, rede, visual)</li>
-                            <li>Todas as otimizações intermediárias (serviços, registro, memória)</li>
-                            <li>Todas as otimizações avançadas (CPU, RAM, gaming)</li>
-                            <li>Modo gaming extremo ativado</li>
-                            <li>Otimizações de sistema máximas</li>
-                        </ul>
-                        
-                        <h4>🚀 Benefícios Máximos:</h4>
-                        <ul style="margin: 1rem 0; color: var(--text-secondary);">
-                            <li>🚀 MÁXIMA PERFORMANCE ABSOLUTA</li>
-                            <li>100% dos recursos liberados para suas tarefas</li>
+                        <h4>🚨 ATENÇÃO MÁXIMA!</h4>
+                        <p><strong>TODAS as otimizações combinadas!</strong></p>
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>MÁXIMA PERFORMANCE ABSOLUTA</li>
+                            <li>100% dos recursos liberados</li>
                             <li>Sistema extremamente responsivo</li>
-                            <li>Melhor performance possível no Windows</li>
                         </ul>
-                        
-                        <h4>⚠️⚠️⚠️ RISCOS CRÍTICOS:</h4>
-                        <div style="background: rgba(239, 68, 68, 0.2); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                            <ul style="margin: 0; color: var(--danger);">
-                                <li><strong>PODE CAUSAR INSTABILIDADE SEVERA!</strong></li>
-                                <li><strong>Sistema fica COMPLETAMENTE VULNERÁVEL</strong></li>
-                                <li><strong>Alguns programas podem parar de funcionar</strong></li>
-                                <li><strong>Windows Update DESABILITADO</strong></li>
-                                <li><strong>Proteções de segurança REMOVIDAS</strong></li>
-                                <li><strong>Pode corromper o sistema</strong></li>
-                            </ul>
-                        </div>
-                        
-                        <h4>✅ ANTES DE EXECUTAR - OBRIGATÓRIO:</h4>
-                        <div style="background: rgba(34, 197, 94, 0.1); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                            <ul style="margin: 0; color: var(--success);">
-                                <li>✅ CRIAR PONTO DE RESTAURAÇÃO</li>
-                                <li>✅ FAZER BACKUP COMPLETO DOS DADOS</li>
-                                <li>✅ TER PENDRIVE DE INSTALAÇÃO DO WINDOWS</li>
-                                <li>✅ USAR APENAS SE FOR EXPERT MESMO!</li>
-                            </ul>
-                        </div>
-                        
-                        <p style="color: var(--text-secondary); font-weight: bold;">
-                            ⚡ Use apenas por sua conta e risco! Prepare-se para reinstalar o Windows se algo der errado!
-                        </p>
+                        <h4>🚨 RISCOS CRÍTICOS:</h4>
+                        <ul style="color: var(--danger);">
+                            <li>PODE CAUSAR INSTABILIDADE SEVERA!</li>
+                            <li>Sistema fica VULNERÁVEL</li>
+                            <li>Windows Update DESABILITADO</li>
+                        </ul>
+                        <p><strong>OBRIGATÓRIO:</strong> Criar ponto de restauração antes!</p>
                     `
                 }
             };
@@ -1415,6 +1023,11 @@
                 title.innerHTML = info[type].title;
                 body.innerHTML = info[type].content;
                 modal.classList.add('active');
+            } else {
+                // Caso não encontre o tipo, mostra mensagem padrão
+                title.innerHTML = 'ℹ️ Informações';
+                body.innerHTML = '<p>Informações detalhadas sobre esta otimização.</p>';
+                modal.classList.add('active');
             }
         }
 
@@ -1422,29 +1035,15 @@
             document.getElementById('infoModal').classList.remove('active');
         }
 
-        // 🎯 INICIALIZAÇÃO
+        // Inicialização
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
         document.getElementById('themeIcon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
-        // 🗑️ FECHAR MODAL
+        // Fechar modal ao clicar fora
         document.getElementById('infoModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
         });
-
-        // ✨ ANIMAÇÕES ADICIONAIS
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
