@@ -1,11 +1,11 @@
-# 🖥️ Kelven Optimizer for PC  
-**O otimizador Windows mais leve, rápido e estiloso da web.**  
-🔗 [Acessar site](https://kelvenapk.github.io/kelvenoptimizer-site)
+# 📱 Kelven Mobile Optimizer  
+**O otimizador Android mais leve, rápido e estiloso da web.**  
+🔗 [Acessar site](https://kelvenapk.github.io/kelvenapk-optimizer-mobile)
 
 ---
 
 ## 🚀 O que é?
-Kelven Optimizer é um **site web otimizado para desktop** que oferece **mais de 25 modos de otimização** para Windows — desde limpeza de sistema até performance máxima para jogos e edição.  
+Kelven Mobile Optimizer é um **site web otimizado para mobile** que oferece **mais de 25 modos de otimização** para Android — desde economia de bateria até performance máxima em jogos.  
 Interface **premium, responsiva e sem instalação**.
 
 ---
@@ -13,11 +13,11 @@ Interface **premium, responsiva e sem instalação**.
 ## 🎯 Funcionalidades
 | Categoria | Otimizações |
 |-----------|-------------|
-| 🧹 **Sistema** | Cache Cleaner Pro, Registry Optimizer, Startup Booster |
-| 🎮 **Gaming** | Game Mode, GPU Optimizer, Latency Reducer |
-| 🔧 **Hardware** | CPU Optimizer, RAM Booster, Disk Defrag |
-| ⚡ **Avançado** | Kernel Tweaks, Power Plan Ultimate, Security Optimizer |
-| 🖥️ **Por Uso** | Office Mode, Edit Mode, Stream Mode, Silent Mode |
+| 🔋 **Bateria** | Battery Saver Pro, Thermal Control, Charger Optimizer |
+| 📱 **Performance** | Cache Cleaner Pro, RAM Booster, System Optimizer |
+| 🎮 **Gaming** | Game Booster, Touch Optimizer, FPS Stabilizer |
+| 🔧 **Avançado** | Kernel Optimizer, Memory Management Extreme, Security Optimizer |
+| 📱 **Por Marca** | Samsung Mode, Xiaomi Mode, Motorola Mode |
 
 ---
 
@@ -31,19 +31,31 @@ Interface **premium, responsiva e sem instalação**.
 ---
 
 ## 📦 Como usar
-1. Acesse: [kelvenapk.github.io/kelvenoptimizer-site](https://kelvenapk.github.io/kelvenoptimizer-site)  
-2. Escolha sua otimização (gaming, sistema, hardware, etc.)  
+1. Acesse: [kelvenapk.github.io/kelvenapk-optimizer-mobile](https://kelvenapk.github.io/kelvenapk-optimizer-mobile)  
+2. Escolha sua otimização (bateria, performance, gaming, etc.)  
 3. Clique em **"Detalhes"** para saber o que cada modo faz  
 4. Ative notificações para ser avisado do lançamento oficial
 
 ---
 
 ## ⚠️ Aviso Importante
-Algumas otimizações avançadas podem exigir **permissões de administrador**.  
-Use com responsabilidade. Este é um site informativo — **não instala nada no seu PC**.
+Algumas otimizações avançadas podem exigir **ROOT**.  
+Use com responsabilidade. Este é um site informativo — **não instala nada no seu celular**.
 
 ---
 
 ## 🛠️ Desenvolvimento
+Quer rodar localmente?
 
+```bash
+git clone https://github.com/kelvenapk/kelvenapk-optimizer-mobile.git
+cd kelvenapk-optimizer-mobile
+# Abra index.html no navegador
+📬 Contato & Contribuição
+Autor: kelvenapk
+Dúvidas ou sugestões? Abra uma issue
+Pull requests são bem-vindos!
+📄 Licença
+Este projeto é apenas um site informativo.
+Não distribua ou copie sem permissão.
 ⭐ Se achou útil, deixe uma estrela no repositório!
