@@ -44,18 +44,10 @@ Use com responsabilidade. Este é um site informativo — **não instala nada no
 
 ---
 
-## 🛠️ Desenvolvimento
-Quer rodar localmente?
-
-```bash
-git clone https://github.com/kelvenapk/kelvenoptimizer-site.git
-cd kelvenoptimizer-site
-# Abra index.html no navegador
-📬 Contato & Contribuição
-Autor: kelvenapk
-Dúvidas ou sugestões? Abra uma issue
-Pull requests são bem-vindos!
+## 🛠️ DesenvolvimentoPull requests são bem-vindos!
 📄 Licença
 Este projeto é apenas um site informativo.
 Não distribua ou copie sem permissão.
+
+
 ⭐ Se achou útil, deixe uma estrela no repositório!
