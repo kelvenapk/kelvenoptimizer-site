@@ -49,4 +49,5 @@ Use com responsabilidade. Este é um site informativo — **não instala nada no
 📄 Licença
 Este projeto é apenas um site informativo.
 Não distribua ou copie sem permissão.
+
 ⭐ Se achou útil, deixe uma estrela no repositório!
