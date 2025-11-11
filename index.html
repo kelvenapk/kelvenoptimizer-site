@@ -140,7 +140,7 @@
         </div>
         <p class="card-description">Remove arquivos temporários, cache, lixeira e prefetch. Libera espaço em disco sem riscos.</p>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('basico/limpeza-temporarios.bat')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('limpeza-de-sistema.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -161,7 +161,7 @@
         </div>
         <p class="card-description">Limpa cache DNS, ARP e NetBIOS. Melhora velocidade de conexão.</p>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('basico/otimizacao-rede.bat')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('otimizacao-de-rede.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -182,7 +182,7 @@
         </div>
         <p class="card-description">Remove animações e efeitos visuais desnecessários. Ideal para PCs mais fracos.</p>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('basico/efeitos-visuais.bat')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('efeitos-visuais.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -213,7 +213,7 @@
           <div class="warning-text">⚠️ Requer conhecimento técnico</div>
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('intermediario/desabilitar-servicos.ps1')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('servicos-do-windows.ps1')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -234,7 +234,7 @@
         </div>
         <p class="card-description">Remove programas da inicialização. Acelera boot em até 50%.</p>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('intermediario/inicializacao.bat')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('inicializacao.ps1')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -258,7 +258,7 @@
           <div class="warning-text">⚠️ Cuidado com registro</div>
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('intermediario/registro.ps1')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('registro-do-sistema.ps1')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -286,7 +286,7 @@
         </div>
         <p class="card-description">Ativa MSI Mode para GPUs. Reduz latência DPC e melhora performance em jogos.</p>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('avancado/msi-mode.ps1')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('msi-mode.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -307,7 +307,7 @@
         </div>
         <p class="card-description">Ajusta resolução do timer para 0.5ms. Reduz input lag e melhora responsividade.</p>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('avancado/timer-resolution.ps1')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('timer-resolution.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -328,7 +328,7 @@
         </div>
         <p class="card-description">Desativa HPET completamente. Reduz latência e melhora performance em jogos competitivos.</p>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('avancado/hpet-disable.bat')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('hpet-disable.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -359,7 +359,7 @@
           <div class="warning-text">🚨 USO POR SUA RESPONSABILIDADE!</div>
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('avancado/cpu-extrema.ps1')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('cpu-extrema.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -383,7 +383,7 @@
           <div class="warning-text">🚨 USO POR SUA RESPONSABILIDADE!</div>
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('avancado/ram-extrema.ps1')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('ram-extrema.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -407,7 +407,7 @@
           <div class="warning-text">🚨🚨🚨 RISCOS CRÍTICOS!</div>
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary btn-small" onclick="downloadScript('avancado/ultimate-mode.ps1')">
+          <button class="btn btn-primary btn-small" onclick="downloadScript('ultimate-mode.bat')">
             <span>⚡</span>
             <span>Baixar Script</span>
           </button>
@@ -770,7 +770,8 @@
     const BASE='https://raw.githubusercontent.com/kelvenapk/kelvenoptimizer-site/main/scripts/';
     function downloadScript(path){
       if(!confirm('⚠️ Você vai baixar um script de otimização.\n✅ Crie um ponto de restauração antes de executar.\n\nDeseja continuar?'))return;
-      const a=document.createElement('a');a.href=BASE+path;a.download=path.split('/').pop();document.body.appendChild(a);a.click();a.remove();alert('✅ Script baixado!\nExecute como Administrador.');
+      window.open(BASE+path,'_blank');
+      alert('✅ Script aberto!\nSalve o arquivo com Ctrl+S ou clique com o botão direito → “Salvar como...”\nDepois execute como Administrador.');
     }
     /* ----------  MODAL INFO  ---------- */
     function showInfo(type){
