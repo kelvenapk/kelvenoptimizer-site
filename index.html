@@ -83,6 +83,7 @@
     @media(max-width:768px){.hero-content{grid-template-columns:1fr;text-align:center;gap:2rem}.hero-visual{display:none}.hero h1{font-size:2.5rem}.section-title{font-size:2rem}.grid{grid-template-columns:1fr;gap:1.5rem}.container{padding:2rem 1rem}}
   </style>
   <base target="_blank">
+<base target="_blank">
 </head>
 <body>
   <div class="bg-professional"></div>
@@ -765,17 +766,24 @@
     /* ----------  NOTIFICAÇÕES  ---------- */
     function showNotification(){alert('🕗 KelvenOptimizer - Em breve! Aguarde o lançamento oficial.');}
     function notifyMe(){localStorage.setItem('kelvenoptimizer-notify','true');alert('🔔 Você será notificado quando o KelvenOptimizer for lançado!');}
-    /* ----------  DOWNLOAD FORÇADO  ---------- */
+    /* ----------  DOWNLOAD FORÇADO (BLOB)  ---------- */
     const BASE='https://raw.githubusercontent.com/kelvenapk/kelvenoptimizer-site/main/scripts/';
     function downloadScript(path){
       if(!confirm('⚠️ Você vai baixar um script de otimização.\n✅ Crie um ponto de restauração antes de executar.\n\nDeseja continuar?'))return;
-      const link=document.createElement('a');
-      link.href=BASE+path;
-      link.download=path;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      alert('✅ Script baixado!\nExecute como Administrador.');
+      fetch(BASE+path)
+        .then(r=>{if(!r.ok)throw new Error('Arquivo não encontrado');return r.text();})
+        .then(texto=>{
+          const blob=new Blob([texto],{type:'text/plain'});
+          const link=document.createElement('a');
+          link.href=URL.createObjectURL(blob);
+          link.download=path;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          URL.revokeObjectURL(link.href);
+          alert('✅ Script baixado!\nExecute como Administrador.');
+        })
+        .catch(()=>alert('❌ Erro ao baixar o script. Verifique sua conexão.'));
     }
     /* ----------  MODAL INFO  ---------- */
     function showInfo(type){
